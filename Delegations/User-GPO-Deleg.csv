@@ -1,6 +1,0 @@
-﻿"GPOName";"Type";"Trustee";"TrusteeSID";"Inherited"
-"User-GPO";"GpoApply";"Authenticated Users";"S-1-5-11";"False"
-"User-GPO";"GpoEditDeleteModifySecurity";"Domain Admins";"S-1-5-21-3314690165-3205763191-4228713095-512";"False"
-"User-GPO";"GpoEditDeleteModifySecurity";"Enterprise Admins";"S-1-5-21-3314690165-3205763191-4228713095-519";"False"
-"User-GPO";"GpoRead";"ENTERPRISE DOMAIN CONTROLLERS";"S-1-5-9";"False"
-"User-GPO";"GpoEditDeleteModifySecurity";"SYSTEM";"S-1-5-18";"False"
