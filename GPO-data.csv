@@ -1,0 +1,9 @@
+﻿"Action";"Name";"GPOStatus";"UserSettings";"ComputerSettings";"NoSettings";"Linked";"LinkingError";"Links";"GPOHasTargets";"Targets";"WmiFilter"
+"To Delete";"NoSecFilters-GP";"AllSettingsEnabled";"False";"False";"True";"True";"False";"oswald.com";"False";"";
+"To Keep";"Default Domain Policy";"AllSettingsEnabled";"False";"True";"False";"True";"False";"oswald.com";"True";"Authenticated Users";
+"To Keep";"User+PC-GPO";"AllSettingsEnabled";"True";"True";"False";"True";"False";"oswald.com";"True";"Authenticated Users";
+"To Keep";"Default Domain Controllers Policy";"AllSettingsEnabled";"False";"True";"False";"True";"False";"oswald.com/Domain Controllers";"True";"Authenticated Users";
+"To Keep";"User-GPO";"AllSettingsEnabled";"True";"False";"False";"True";"False";"oswald.com";"True";"Authenticated Users";
+"To Analyse";"NoSettings-GPO";"AllSettingsEnabled";"True";"False";"False";"True";"True";"oswald.com|oswald.com/Domain Controllers";"True";"Authenticated Users";
+"To Delete";"PC-Gpo";"AllSettingsDisabled";"False";"True";"False";"True";"False";"oswald.com";"True";"Authenticated Users";
+"To Keep";"Unlinked-GPO";"AllSettingsEnabled";"False";"True";"False";"False";"False";"";"True";"Authenticated Users";
