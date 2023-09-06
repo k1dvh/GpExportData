@@ -36,17 +36,32 @@ if (!(Test-Path ".\Delegations")) {
     }
 }
 
+if (!(Test-Path ".\Parameters")) {
+    try {
+        New-Item -Path "$PSScriptRoot" -Name "Parameters" -ItemType Directory -Force
+    }
+    catch {
+        Write-Error $_.Exception.Message
+    }
+}
+
+
 $AllResults = @()
 
-$ALlGPOs = Get-GPO -All
+$AllGPOs = Get-GPO -All
 $DomainDNS = (Get-ADDomain).DNSRoot
 
-foreach ($GPO in $ALlGPOs) {
+foreach ($GPO in $AllGPOs) {
 
     [bool] $isUserSettings = $false
+    $UserSettings = $null
+    $ComputerSettings = $null
     [bool] $isComputerSettings = $false
     [bool] $NoSettings = $false
+    
     $AllLinks = @()
+    $AllSettings = @()
+
     [bool] $Linked = $true
     [bool] $LinkingError = $false
     [string] $ConcatenateLinks = ""
@@ -55,19 +70,66 @@ foreach ($GPO in $ALlGPOs) {
     [string] $Targets = ""
     [xml] $Report = Get-GPOReport $GPO.DisplayName -ReportType Xml
 
-    $Links = $Report.GPO.LinksTo    
+    $Links = $Report.GPO.LinksTo
 
 
     if ($GPO.User.DSVersion -ne 0) {
         $isUserSettings = $true
+        $UserSettings = $Report.GPO.User.ExtensionData.Extension
     }
     if ($GPO.Computer.DSVersion -ne 0) {
         $isComputerSettings = $true
+        $ComputerSettings = $Report.GPO.User.ExtensionData.Extension
     }
 
     if ($GPo.Computer.DSVersion -eq 0 -and $GPO.User.DSVersion -eq 0) {
         $NoSettings = $true
     }
+
+    foreach ($Setting in ($UserSettings + $ComputerSettings)) {
+
+        $Property = ($Setting | Get-Member -MemberType Properties | ? {
+                $_.Name -notlike "q*" -and $_.Name -ne "type" -and $_.Name -ne "blocked"
+            }).Name
+
+        switch ($Property) {
+            "Policy" { 
+                foreach ($Parameter in $Setting.$Property) {
+
+                    if ($Parameter.CheckBox) { 
+                        [string] $ParameterType = "CheckBox"
+                        $ParameterDetail = $Parameter.CheckBox.Name
+                        $ParameterValue = $Parameter.CheckBox.State
+                    }
+                    elseif ($Parameter.Numeric) { 
+                        [string] $ParameterType = "Value"
+                        [string] $ParameterDetail = $Parameter.Text.Name + $Parameter.Numeric.Name
+                        $ParameterValue = $Parameter.Numeric.Value
+                    }
+
+                    $AllSettings += [PSCustomObject]@{
+                        GPOName         = $GPO.DisplayName
+                        ParameterPath   = $Parameter.Category
+                        ParameterName   = $Parameter.Name
+                        ParameterStatus = $Parameter.State
+                        ParameterType   = $ParameterType
+                        ParameterDetail = $ParameterDetail
+                        ParameterValue  = $ParameterValue
+                    }
+                }
+            }
+            Default {}
+        }
+        
+        $AllSettings += [PSCustomObject]@{
+            GPOName         = $GPO.DisplayName
+            ParameterPath   = "path"
+            ParameterName   = $Setting.Name
+            ParameterStatus = $Setting.State
+            ParameterDetail = "detail"
+        }
+    }
+
 
     if (!($Links)) {
         $Linked = $false
@@ -116,6 +178,7 @@ foreach ($GPO in $ALlGPOs) {
 
         $AllLinks | Export-Csv -Path ".\Links\$($GPO.DisplayName)-Links.csv" -Delimiter ";" -Encoding UTF8 -NoTypeInformation -Force
     }
+
 
     $GPOPerms = (Get-GPPermission -Name $GPO.DisplayName -All)
     if (!($GPOPerms | Where-Object { $_.Permission -eq "GpoApply" } )) {
