@@ -17,6 +17,43 @@
 .NOTES
     For any suggestions for improvement, please contact quentin.mallet@outlook.com
 #>
+function Add-CustomProperties {
+    param (
+        # Parameter help description
+        [Parameter(
+            Mandatory
+        )]
+        $Obj,
+        # Parameter help description
+        [Parameter(
+            Mandatory
+        )]
+        $Type,
+        # Parameter help description
+        [Parameter(
+            Mandatory
+        )]
+        $ParameterData
+    )
+
+    $Obj.ParameterDetail = $null
+    $Obj.ParameterValue = $null
+
+    switch ($Type) {
+        "Checkbox" {
+            $Obj.ParameterDetail = $ParameterData.Name
+            $Obj.ParameterValue = $ParameterData.State
+        }
+        Default {}
+    }
+
+    # Write-Host -ForegroundColor Cyan $SettingsObj.ParameterDetail
+    # Write-Host -ForegroundColor Magenta $SettingsObj.ParameterValue 
+
+    $Obj.ParameterType = $Type
+
+    return $Obj
+}
 
 if (!(Test-Path ".\Links")) {
     try {
@@ -48,8 +85,8 @@ if (!(Test-Path ".\Parameters")) {
 
 $AllResults = @()
 
-$AllGPOs = Get-GPO -All
-$DomainDNS = (Get-ADDomain).DNSRoot
+$AllGPOs = Get-GPO "HAD-Bitlocker-TpmOnly-Win10-11"
+$DomainDNS = 
 
 foreach ($GPO in $AllGPOs) {
 
@@ -72,63 +109,139 @@ foreach ($GPO in $AllGPOs) {
 
     $Links = $Report.GPO.LinksTo
 
+    Write-Host $GPO.DisplayName -ForegroundColor Magenta
 
     if ($GPO.User.DSVersion -ne 0) {
         $isUserSettings = $true
         $UserSettings = $Report.GPO.User.ExtensionData.Extension
     }
     if ($GPO.Computer.DSVersion -ne 0) {
+        Write-Host "Computer GPO" -ForegroundColor Green
         $isComputerSettings = $true
-        $ComputerSettings = $Report.GPO.User.ExtensionData.Extension
+        # $Report.GPO.Computer.ExtensionData.Extension
+        $ComputerSettings = $Report.GPO.Computer.ExtensionData.Extension
     }
 
     if ($GPo.Computer.DSVersion -eq 0 -and $GPO.User.DSVersion -eq 0) {
         $NoSettings = $true
     }
 
-    foreach ($Setting in ($UserSettings + $ComputerSettings)) {
+    foreach ($Setting in $ComputerSettings) {
 
-        $Property = ($Setting | Get-Member -MemberType Properties | ? {
+        $Property = ($Setting | Get-Member -MemberType Properties | Where-Object {
                 $_.Name -notlike "q*" -and $_.Name -ne "type" -and $_.Name -ne "blocked"
             }).Name
 
         switch ($Property) {
-            "Policy" { 
+            
+            "Policy" {
                 foreach ($Parameter in $Setting.$Property) {
 
-                    if ($Parameter.CheckBox) { 
-                        [string] $ParameterType = "CheckBox"
-                        $ParameterDetail = $Parameter.CheckBox.Name
-                        $ParameterValue = $Parameter.CheckBox.State
-                    }
-                    elseif ($Parameter.Numeric) { 
-                        [string] $ParameterType = "Value"
-                        [string] $ParameterDetail = $Parameter.Text.Name + $Parameter.Numeric.Name
-                        $ParameterValue = $Parameter.Numeric.Value
+                    $Parameter
+
+                    if ($Parameter.CheckBox) {
+                        foreach ($CheckBox in $Parameter.CheckBox) {
+                            $AllSettings += [PSCustomObject]@{
+                                GPOName         = $GPO.DisplayName
+                                Type            = "Administrative Templates"
+                                ParameterPath   = $Parameter.Category
+                                ParameterName   = $Parameter.Name
+                                ParameterStatus = $Parameter.State
+                                ParameterType   = "CheckBox"
+                                ParameterDetail = $CheckBox.Name
+                                ParameterValue  = $CheckBox.Value
+                            }         
+                        }
                     }
 
-                    $AllSettings += [PSCustomObject]@{
-                        GPOName         = $GPO.DisplayName
-                        ParameterPath   = $Parameter.Category
-                        ParameterName   = $Parameter.Name
-                        ParameterStatus = $Parameter.State
-                        ParameterType   = $ParameterType
-                        ParameterDetail = $ParameterDetail
-                        ParameterValue  = $ParameterValue
+                    if ($Parameter.Numeric) {
+                        $Parameter.Numeric | ForEach-Object {
+    
+                            $ParameterType = "Numeric"
+                            $ParameterDetail = $Parameter.Text.Name
+                            $ParameterValue = $_.Value.Name
+                            
+                            if ($Parameter.State -eq "Disabled") {
+                                $ParameterType = $null
+                                $ParameterDetail = $null
+                                $ParameterValue = $null
+                            }
+    
+                            $AllSettings += [PSCustomObject]@{
+                                GPOName         = $GPO.DisplayName
+                                Type            = "Administrative Template"
+                                ParameterPath   = $Parameter.Category
+                                ParameterName   = $Parameter.Name
+                                ParameterStatus = $Parameter.State
+                                ParameterType   = $ParameterType
+                                ParameterDetail = $ParameterDetail
+                                ParameterValue  = $ParameterValue
+                            }    
+                        }
+                    }
+                    
+                    if ($Parameter.DropDownList) {
+                        $Parameter.DropDownList | ForEach-Object {
+    
+                            $ParameterValue = $_.Value.Name
+                            $ParameterType = "DropDown List"
+    
+                            if ($_.Name) {
+                                $ParameterDetail = $_.Name
+                            }
+                            else {
+                                $ParameterDetail = $_.ParentNode.Text.Name
+                            }
+    
+                            if ($Parameter.State -eq "Disabled") {
+                                $ParameterType = $null
+                                $ParameterDetail = $null
+                                $ParameterValue = $null
+                            }
+                            $AllSettings += [PSCustomObject]@{
+                                GPOName         = $GPO.DisplayName
+                                Type            = "Administrative Template"
+                                ParameterPath   = $Parameter.Category
+                                ParameterName   = $Parameter.Name
+                                ParameterStatus = $Parameter.State
+                                ParameterType   = $ParameterType
+                                ParameterDetail = $ParameterDetail
+                                ParameterValue  = $ParameterValue
+                            } 
+                        }
                     }
                 }
             }
-            Default {}
-        }
-        
-        $AllSettings += [PSCustomObject]@{
-            GPOName         = $GPO.DisplayName
-            ParameterPath   = "path"
-            ParameterName   = $Setting.Name
-            ParameterStatus = $Setting.State
-            ParameterDetail = "detail"
+            # "Script" {
+            #     foreach ($Parameter in $Setting.$Property) {
+            #         $Parameter
+            #         $Parameter.Command
+            #         $Parameter.Type
+            #         $Parameter.RunOrder
+
+            #         $AllSettings += [PSCustomObject]@{
+            #             GPOName         = $GPO.DisplayName
+            #             Type            = "Script"
+            #             ParameterPath   = ""
+            #             ParameterName   = $Parameter.Name
+            #             ParameterStatus = $Parameter.State
+            #             ParameterType   = "DropDown List"
+            #             ParameterDetail = $ParameterDetail
+            #             ParameterValue  = $_.Value.Name
+            #         } 
+            #     }
+            # }
+            Default {
+                Continue
+            }
         }
     }
+
+    # $AllSettings | ForEach-Object {
+    #     Write-Host $_
+    # }
+
+    $AllSettings | Export-Csv -Path ".\Parameters\$($GPO.DisplayName)-Parameter.csv" -Delimiter ";" -Encoding UTF8 -NoTypeInformation -Force
 
 
     if (!($Links)) {
