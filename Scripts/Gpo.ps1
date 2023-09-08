@@ -7,11 +7,10 @@ function Get-GpoLinks {
     )
 
     [System.Object] $Links = $Gpo.Report.GPO.LinksTo
-    [string] $ConcatenatedLinks = $null
-
     [System.Object] $_Links = @() 
 
     $Gpo | Add-Member -NotePropertyName "Linked" -NotePropertyValue $true
+    $Gpo | Add-Member -NotePropertyName "ConcatenatedLinks" -NotePropertyValue $null
 
     if (!$Links) {
         $Gpo.Linked = $false
@@ -22,7 +21,7 @@ function Get-GpoLinks {
             [bool] $WellLinkedComputer = $true
             [string] $LinkStatus = "OK"
             
-            $ConcatenatedLinks += "|" + $Link.SOMPath
+            $Gpo.ConcatenatedLinks += "|" + $Link.SOMPath
 
             if ($Link.SOMPath -ne $Data.Domain.DNSRoot) {
                 $LinkedOU = Get-ADOrganizationalUnit -Filter * -Properties CanonicalName | Where-Object {
@@ -56,6 +55,10 @@ function Get-GpoLinks {
             $_Links += $LinksObject
         }
 
+        if ($Gpo.ConcatenatedLinks.Length -gt 0) {
+            $Gpo.ConcatenatedLinks = $Gpo.ConcatenatedLinks.Substring(1)
+        }
+
         $_Links | Export-Csv -Path "$($Config.Links.FullName)\$($GPO.Data.DisplayName)-Links.csv" `
             -Delimiter ";" `
             -Encoding UTF8 `
@@ -66,6 +69,52 @@ function Get-GpoLinks {
     # return $LinksObject
 }
 
+function Get-GpoDelegations {
+    [CmdletBinding()]
+    param (
+        [Parameter()]
+        [PSCustomObject]
+        $Gpo
+    )
+
+    [System.Object] $_Delegs = @()
+    [System.Object] $Perms = Get-GPPermissions -Name $Gpo.Data.DisplayName -All
+
+    $Gpo | Add-Member -NotePropertyName "GpoHasTarget" -NotePropertyValue $true
+    $Gpo | Add-Member -NotePropertyName "Targets" -NotePropertyValue $null
+
+
+
+    if (!($Perms | Where-Object { $_.Permission -eq "GpoApply" })) {
+        $Gpo.GpoHasTarget -eq $false
+    }
+    else {
+        foreach ($Perm in ($Perms | Where-Object { $_.Permission -eq "GpoApply" })) {
+            $Gpo.Targets += "|" + $Perm.Trustee.Name
+        }
+    }
+
+    if ($Gpo.Targets.Length -gt 0) {
+        $Gpo.Targets = $Gpo.Targets.Substring(1)
+    }
+
+    foreach ($Perm in $Perms) {
+        $_Delegs += [PSCustomObject]@{
+            GPOName    = $GPO.Data.DisplayName
+            Type       = $Perm.Permission
+            Trustee    = $Perm.Trustee.Name
+            TrusteeSID = $Perm.Trustee.SID
+            Inherited  = $Perm.Inherited        
+        }
+    }
+
+    $_Delegs | Export-Csv -Path "$($Config.Delegations.FullName)\$($GPO.Data.DisplayName)-Delegations.csv" `
+        -Delimiter ";" `
+        -Encoding UTF8 `
+        -NoTypeInformation `
+        -Force
+}
+
 function Get-GpoGlobalInformations {
     [CmdletBinding()]
     param (
@@ -73,27 +122,18 @@ function Get-GpoGlobalInformations {
         [PSCustomObject]
         $Gpo
     )
-    $Gpo | Add-Member -NotePropertyName "GpoStatus" -NotePropertyValue $false
     $Gpo | Add-Member -NotePropertyName "ComputerSettings" -NotePropertyValue $false
     $Gpo | Add-Member -NotePropertyName "UserSettings" -NotePropertyValue $false
-
-    if ($Gpo.Data.User.Enabled -and $Gpo.Data.Computer.Enabled) {
-        $Gpo.GpoStatus = "AllSettingsEnabled"
-    }
-    elseif ($Gpo.Data.Computer.Enabled) {
-        $Gpo.GpoStatus = "ComputerSettingsEnabled"
-    }
-    elseif ($Gpo.Data.User.Enabled) {
-        $Gpo.GpoStatus = "UserSettingsEnabled"
-    }
-    else {
-        $Gpo.GpoStatus = "AllSettingsDisabled"
-    }
+    $Gpo | Add-Member -NotePropertyName "NoSettings" -NotePropertyValue $false
 
     if ($Gpo.Report.Gpo.User.ExtensionData) {
         $Gpo.UserSettings = $true
     }
     if ($Gpo.Report.Gpo.Computer.ExtensionData) {
         $Gpo.ComputerSettings = $true
+    }
+
+    if (!$Gpo.UserSettings -and !$Gpo.ComputerSettings) {
+        $Gpo.NoSettings = $true
     }
 }
