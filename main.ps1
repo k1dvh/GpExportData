@@ -14,7 +14,7 @@ $Config["Links"] = New-DirStruc -FolderName "Links" -Path $Config["Results"].Ful
 $Config["Delegations"] = New-DirStruc -FolderName "Delegations" -Path $Config["Results"].FullName
 $Config["Settings"] = New-DirStruc -FolderName "Settings" -Path $Config["Results"].FullName
 
-$Data["GPOs"] = Get-GPO -All
+$Data["GPOs"] = Get-GPO "Default Domain Policy"
 $Data["Domain"] = Get-ADDomain
 
 foreach ($Gpo in $Data.Gpos) {
@@ -29,6 +29,7 @@ foreach ($Gpo in $Data.Gpos) {
     Get-GpoGlobalInformations -Gpo $CustomGPO
     Get-GpoLinks -Gpo $CustomGPO
     Get-GpoDelegations -Gpo $CustomGPO
+    Get-GpoSettings -Gpo $CustomGPO
 
     $Data.Custom += $CustomGPO
     
