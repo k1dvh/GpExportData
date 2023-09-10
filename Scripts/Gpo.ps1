@@ -302,7 +302,6 @@ function Set-SettingType {
             }
         }
         "SecurityOptions" {
-            Write-Host "1"
             foreach ($Set in $Setting.SecurityOptions) {
                 if ($Set.Display.DisplayFields) {
                     foreach ($Field in $Setting.Display.DisplayFields.Field) {
@@ -319,9 +318,7 @@ function Set-SettingType {
                     }   
                 }
                 if ($Set.Display.DisplayBoolean) {
-                    Write-Host "2"
                     foreach ($Param in $Set.Display) {
-                        Write-Host $Param.Name
                         $ExportArray += [PSCustomObject]@{
                             GPOName         = $GPO.Data.DisplayName
                             SettingCategory = "Security Option"
@@ -336,12 +333,190 @@ function Set-SettingType {
                 }
             }
         }
+        "LocalUsersAndGroups" {
+            foreach ($Entry in $Setting.LocalUsersAndGroups) {
+                foreach ($Group in $Entry.Group) {
+                    foreach ($Member in $Group.Properties.Members.Member) {
+                        $ExportArray += [PSCustomObject]@{
+                            GPOName         = $GPO.Data.DisplayName
+                            SettingCategory = "Local Users And Groups"
+                            SettingPath     = $null
+                            SettingName     = "Local Group : $($Group.Name)"
+                            SettingStatus   = "Member: $($Member.Name)"
+                            Type            = $null
+                            Statement       = $null
+                            Value           = "SID : $($Member.sid)"
+                        }
+                    }
+                }
+            }
+        }
+        "RegistrySettings" {
+            foreach ($Param in $Setting.RegistrySettings) {
+                if ($Param.Registry) {
+                    foreach ($Key in $Param.Registry) {
+                        $ExportArray += [PSCustomObject]@{
+                            GPOName         = $GPO.Data.DisplayName
+                            SettingCategory = "Registry Settings"
+                            SettingPath     = $Key.Properties.key
+                            SettingName     = $Key.Properties.name
+                            SettingStatus   = $null
+                            Type            = $Key.Properties.type
+                            Statement       = $null
+                            Value           = $Key.Properties.value
+                        }
+                    }
+                }
+                if ($Param.Collection) {
+                    $FinalCollection = Get-RegistryCollections $Param.Collection
+
+                    foreach ($Collect in $FinalCollection) {
+                        foreach ($Key in $Collect.Registry) {
+                            $ExportArray += [PSCustomObject]@{
+                                GPOName         = $GPO.Data.DisplayName
+                                SettingCategory = "Registry Settings"
+                                SettingPath     = $key.Properties.key
+                                SettingName     = $Key.name
+                                SettingStatus   = $null
+                                Type            = $Key.Properties.type
+                                Statement       = $null
+                                Value           = $Key.Properties.value
+                            }
+                        }
+                    }
+                }
+                else {
+                    Write-Host "Other type of parameter here" -ForegroundColor Red
+                }
+            }
+        }
+        "SystemServices" {
+            foreach ($Param in $Setting.SystemServices) {
+                $ExportArray += [PSCustomObject]@{
+                    GPOName         = $GPO.Data.DisplayName
+                    SettingCategory = "System Services"
+                    SettingPath     = $null
+                    SettingName     = $Param.Name
+                    SettingStatus   = $Param.StartupMode
+                    Type            = $null
+                    Statement       = $null
+                    Value           = $null
+                }
+            }
+        }
+        "GlobalSettings" {
+        }
+        { ($_ -eq "DomainProfile") -or ($_ -eq "PublicProfile") -or ($_ -eq "PrivateProfile") } {
+            $Params = $Setting.$SettingType | Get-Member -MemberType Properties
+            foreach ($Param in $Params) {
+                $ExportArray += [PSCustomObject]@{
+                    GPOName         = $GPO.Data.DisplayName
+                    SettingCategory = "Firewall Rules"
+                    SettingPath     = $SettingType
+                    SettingName     = $Param.Name
+                    SettingStatus   = $Setting.$SettingType.$($Param.Name).Value
+                    Type            = $null
+                    Statement       = $null
+                    Value           = $null
+                }
+            }
+        }
+        "AuditSetting" {
+            foreach ($Param in $Setting.$SettingType) {
+                $AuditType = ""
+
+                if ($param.SettingValue -eq 0) {
+                    $AuditType = "No auditing"
+                }
+                elseif ($param.SettingValue -eq 1) {
+                    $AuditType = "Success"
+                }
+                elseif ($param.SettingValue -eq 2) {
+                    $AuditType = "Failure"
+                }
+                else {
+                    $AuditType = "Success & Failure"
+                }
+                $ExportArray += [PSCustomObject]@{
+                    GPOName         = $GPO.Data.DisplayName
+                    SettingCategory = "Auditing"
+                    SettingPath     = $null
+                    SettingName     = $Param.SubcategoryName
+                    SettingStatus   = $AuditType
+                    Type            = $null
+                    Statement       = $null
+                    Value           = $null
+                }
+            }
+        }
+        "Audit" {
+            foreach ($Param in $Setting.$SettingType) {
+                $AuditType = ""
+                if ($Param.SuccessAttempts -and $Param.FailureAttempts) {
+                    $AuditType = "Success & Failure"
+                }
+                elseif ($Param.SuccessAttempts) {
+                    $AuditType = "Success"
+                }
+                elseif ($Param.FailureAttempts) {
+                    $AuditType = "Failure"
+                }
+                else {
+                    $AuditType = "No auditing"
+                }
+                $ExportArray += [PSCustomObject]@{
+                    GPOName         = $GPO.Data.DisplayName
+                    SettingCategory = "Audit"
+                    SettingPath     = $null
+                    SettingName     = $Param.Name
+                    SettingStatus   = $AuditType
+                    Type            = $null
+                    Statement       = $null
+                    Value           = $null
+                }
+            }
+        }
+        "EventLog" {
+            foreach ($Param in $Setting.$SettingType) {
+                $ExportArray += [PSCustomObject]@{
+                    GPOName         = $GPO.Data.DisplayName
+                    SettingCategory = "Event Log"
+                    SettingPath     = $null
+                    SettingName     = $Param.Name
+                    SettingStatus   = $null
+                    Type            = $Param.Log
+                    Statement       = $null
+                    Value           = $Param.SettingNumber
+                }
+            }
+        }
+    
         Default {
+            Write-Host $Gpo.Data.DisplayName -ForegroundColor Magenta
             Write-Host $SettingType
         }
     }
     return $ExportArray
 
+}
+
+function Get-RegistryCollections {
+    [CmdletBinding()]
+    param (
+        [Parameter(
+            Mandatory
+        )]
+        $Collection
+    )
+    $Members = $Collection | Get-Member -MemberType Properties
+
+    if ("Collection" -in $Members.Name) {
+        Get-RegistryCollections -Collection $Collection.Collection
+    }
+    else {
+        return $Collection
+
+    }
 }
 
 function Get-GpoGlobalInformations {
