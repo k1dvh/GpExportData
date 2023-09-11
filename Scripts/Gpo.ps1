@@ -1,3 +1,38 @@
+function New-DirStruc {
+    [CmdletBinding()]
+    param (
+        [Parameter(
+            Mandatory
+        )]
+        [string]
+        $FolderName,
+        [Parameter(
+            Mandatory
+        )]
+        [string]
+        $Path
+    )
+
+    if (Test-Path "$Path\$FolderName") {
+        try {
+            $Folder = Get-Item "$Path\$FolderName"
+        }
+        catch {
+            Write-Error $_.Exception.Message
+        }    
+    }
+    else {
+        try {
+            $Folder = New-Item -Path $Path -Name $FolderName -ItemType Directory -Force
+        }
+        catch {
+            Write-Error $_.Exception.Message
+        }
+    }
+
+    return $Folder
+}
+
 function Get-GpoLinks {
     [CmdletBinding()]
     param (
@@ -13,6 +48,7 @@ function Get-GpoLinks {
 
     $Gpo | Add-Member -NotePropertyName "Linked" -NotePropertyValue $true
     $Gpo | Add-Member -NotePropertyName "ConcatenatedLinks" -NotePropertyValue $null
+    $Gpo | Add-Member -NotePropertyName "LinkingError" -NotePropertyValue $false
 
     if (!$Links) {
         $Gpo.Linked = $false
@@ -52,7 +88,9 @@ function Get-GpoLinks {
                 GPOStatus = $LinkStatus    
             }
 
-            # $LinksObject
+            if ($LinkStatus -ne "OK") {
+                $Gpo.LinkingError = $true
+            }
 
             $_Links += $LinksObject
         }
@@ -137,7 +175,7 @@ function Get-GpoSettings {
 
         foreach ($Setting in $Settings) {
             $SettingType = ($Setting | Get-Member -MemberType Properties | Where-Object {
-                    $_.Name -notlike "q*" -and $_.Name -ne "type" -and $_.Name -ne "blocked"
+                    $_.Name -notlike "q*" -and $_.Name -ne "type" -and $_.Name -ne "blocked" -and $_.Name -ne "Global"
                 }).Name
 
             foreach ($Type in $SettingType) {
@@ -303,33 +341,53 @@ function Set-SettingType {
         }
         "SecurityOptions" {
             foreach ($Set in $Setting.SecurityOptions) {
-                if ($Set.Display.DisplayFields) {
-                    foreach ($Field in $Setting.Display.DisplayFields.Field) {
-                        $ExportArray += [PSCustomObject]@{
-                            GPOName         = $GPO.Data.DisplayName
-                            SettingCategory = "Security Option"
-                            SettingPath     = "Reg Path: $($Set.KeyName)"
-                            SettingName     = $Set.Display.Name
-                            SettingStatus   = $Field.Name.'#text'
-                            Type            = $null
-                            Statement       = $Field.Name
-                            Value           = $Field.Value
-                        }    
-                    }   
+                if (!$Set.Display) {
+                    if ($Set.SettingNumber -eq 0) {
+                        $Status = "Disabled"
+                    }
+                    else {
+                        $Status = "Enabled"
+                    }
+                    $ExportArray += [PSCustomObject]@{
+                        GPOName         = $GPO.Data.DisplayName
+                        SettingCategory = "Security Option"
+                        SettingPath     = $null
+                        SettingName     = $Set.SystemAccessPolicyName
+                        SettingStatus   = $Status
+                        Type            = $null
+                        Statement       = $null
+                        Value           = $null
+                    }
                 }
-                if ($Set.Display.DisplayBoolean) {
-                    foreach ($Param in $Set.Display) {
-                        $ExportArray += [PSCustomObject]@{
-                            GPOName         = $GPO.Data.DisplayName
-                            SettingCategory = "Security Option"
-                            SettingPath     = "Reg Path: $($Set.KeyName)"
-                            SettingName     = $Param.Name
-                            SettingStatus   = $Param.DisplayBoolean
-                            Type            = $null
-                            Statement       = $null
-                            Value           = $null
-                        }
-                    }   
+                else {
+                    if ($Set.Display.DisplayFields) {
+                        foreach ($Field in $Set.Display.DisplayFields.Field) {
+                            $ExportArray += [PSCustomObject]@{
+                                GPOName         = $GPO.Data.DisplayName
+                                SettingCategory = "Security Option"
+                                SettingPath     = "Reg Path: $($Set.KeyName)"
+                                SettingName     = $Set.Display.Name
+                                SettingStatus   = $Field.Name.'#text'
+                                Type            = $null
+                                Statement       = $Field.Name
+                                Value           = $Field.Value
+                            }    
+                        }   
+                    }
+                    if ($Set.Display.DisplayBoolean) {
+                        foreach ($Param in $Set.Display) {
+                            $ExportArray += [PSCustomObject]@{
+                                GPOName         = $GPO.Data.DisplayName
+                                SettingCategory = "Security Option"
+                                SettingPath     = "Reg Path: $($Set.KeyName)"
+                                SettingName     = $Param.Name
+                                SettingStatus   = $Param.DisplayBoolean
+                                Type            = $null
+                                Statement       = $null
+                                Value           = $null
+                            }
+                        }   
+                    }
                 }
             }
         }
@@ -367,6 +425,10 @@ function Set-SettingType {
                         }
                     }
                 }
+                # else {
+                #     Write-Host $Gpo.Data.DisplayName -ForegroundColor Yellow
+                #     Write-Host "Other type of parameter here" -ForegroundColor Red
+                # }
                 if ($Param.Collection) {
                     $FinalCollection = Get-RegistryCollections $Param.Collection
 
@@ -385,8 +447,23 @@ function Set-SettingType {
                         }
                     }
                 }
-                else {
-                    Write-Host "Other type of parameter here" -ForegroundColor Red
+                # else {
+                #     Write-Host $Gpo.Data.DisplayName -ForegroundColor Yellow
+                #     Write-Host "Other type of parameter here" -ForegroundColor Red
+                # }
+            }
+        }
+        "RegistrySetting" {
+            foreach ($Param in $Setting.$SettingType) {
+                $ExportArray += [PSCustomObject]@{
+                    GPOName         = $GPO.Data.DisplayName
+                    SettingCategory = "Registry Settings"
+                    SettingPath     = $Param.KeyPath
+                    SettingName     = $Param.Value.Name
+                    SettingStatus   = $null
+                    Type            = $null
+                    Statement       = $null
+                    Value           = $Param.Value.Number
                 }
             }
         }
@@ -490,7 +567,45 @@ function Set-SettingType {
                 }
             }
         }
-    
+        "InboundFirewallRules" {
+            foreach ($Param in $Setting.$SettingType) {
+                $ExportArray += [PSCustomObject]@{
+                    GPOName         = $GPO.Data.DisplayName
+                    SettingCategory = "Firewall Inbound rule"
+                    SettingPath     = $Param.Dir
+                    SettingName     = $Param.Name
+                    SettingStatus   = $null
+                    Type            = $null
+                    Statement       = $Param.Action
+                    Value           = $Param.LPort
+                }
+            }
+        }
+        { $_ -eq "EFSSettings" -or $_ -eq "RootCertificateSettings" -or $_ -eq "EFSRecoveryAgent" } {
+        }
+        "Account" {
+            foreach ($Param in $Setting.$SettingType) {
+                if ($Param.SettingBoolean) {
+                    $Value = $Param.SettingBoolean
+                }
+                if ($Param.SettingNumber) {
+                    $Value = $Param.SettingNumber
+
+                }
+
+                $ExportArray += [PSCustomObject]@{
+                    GPOName         = $GPO.Data.DisplayName
+                    SettingCategory = "Account Settings"
+                    SettingPath     = $Param.Type
+                    SettingName     = $Param.Name
+                    SettingStatus   = $null
+                    Type            = $null
+                    Statement       = $null
+                    Value           = $Value
+                }
+            }
+        }
+
         Default {
             Write-Host $Gpo.Data.DisplayName -ForegroundColor Magenta
             Write-Host $SettingType

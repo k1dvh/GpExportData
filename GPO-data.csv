@@ -1,2 +1,0 @@
-﻿"Action";"Name";"GPOStatus";"NoSettings";"UserSettings";"ComputerSettings";"Linked";"LinkingError";"Links";"GPOHasTargets";"Targets";"WmiFilter"
-"To Keep";"HAD-Bitlocker-TpmOnly-Win10-11";"UserSettingsDisabled";"False";"True";"True";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-Bitlocker-TpmOnly-Win10-11_APPLY";"Microsoft.GroupPolicy.WmiFilter"

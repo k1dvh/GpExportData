@@ -18,7 +18,6 @@ $Data["GPOs"] = Get-GPO -All
 $Data["Domain"] = Get-ADDomain
 
 foreach ($Gpo in $Data.Gpos) {
-
     [xml] $Report = Get-GPOReport -Name $Gpo.DisplayName -ReportType Xml
 
     $CustomGPO = [PSCustomObject]@{
@@ -32,12 +31,29 @@ foreach ($Gpo in $Data.Gpos) {
     Get-GpoSettings -Gpo $CustomGPO
 
     $Data.Custom += $CustomGPO
-    
 }
 
+
+
 $Data.Custom | ForEach-Object {
+
+    if ($_.Data.GpoStatus -eq "AllsettingsDisabled" `
+            -or $_.NoSettings `
+            -or !$_.GpoHasTarget) {
+        $Action = "To Delete"
+
+        Write-Host $_.Data.DisplayName -ForegroundColor Magenta
+        Write-Host "Status: $($_.Data.GpoStatus)`nNoSettings: $($_.NoSettings)`nTarget: $($_.GpoHasTarget)"
+    }
+    elseif ($_.LinkingError) {
+        $Action = "To Analyse"
+    }
+    else {
+        $Action = "To Keep"
+    }
+
     $FormattedArray += [PSCustomObject]@{
-        Action           = "Todo"
+        Action           = $Action
         Name             = $_.Data.DisplayName
         GPOStatus        = $_.Data.GpoStatus
         NoSettings       = $_.NoSettings
@@ -49,6 +65,10 @@ $Data.Custom | ForEach-Object {
         Targets          = $_.Targets
         WmiFilters       = $_.Data.WmiFilter
     }
-} 
+}
 
-$FormattedArray | Export-Csv -Path "$($Config.Results.FullName)\export.csv" -Force
+Get-ChildItem $Config.Settings.FullName -filter "*.csv" | % {
+    Import-Csv $_.FullName | Export-Csv "$($Config.Results.FullName)\AllSettings.csv" -NoTypeInformation -Delimiter ";" -Encoding UTF8 -Append
+}
+
+$FormattedArray | Export-Csv -Path "$($Config.Results.FullName)\GPO-Summary.csv" -NoTypeInformation -Delimiter ";" -Encoding UTF8 -Force 
