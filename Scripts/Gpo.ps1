@@ -207,7 +207,6 @@ function Set-SettingType {
     )
 
     $ExportArray = @()
-    # Write-host $SettingType
 
     switch ($SettingType) {
         "Policy" {
@@ -425,10 +424,6 @@ function Set-SettingType {
                         }
                     }
                 }
-                # else {
-                #     Write-Host $Gpo.Data.DisplayName -ForegroundColor Yellow
-                #     Write-Host "Other type of parameter here" -ForegroundColor Red
-                # }
                 if ($Param.Collection) {
                     $FinalCollection = Get-RegistryCollections $Param.Collection
 
@@ -447,10 +442,6 @@ function Set-SettingType {
                         }
                     }
                 }
-                # else {
-                #     Write-Host $Gpo.Data.DisplayName -ForegroundColor Yellow
-                #     Write-Host "Other type of parameter here" -ForegroundColor Red
-                # }
             }
         }
         "RegistrySetting" {
@@ -607,8 +598,6 @@ function Set-SettingType {
         }
 
         Default {
-            Write-Host $Gpo.Data.DisplayName -ForegroundColor Magenta
-            Write-Host $SettingType
         }
     }
     return $ExportArray
