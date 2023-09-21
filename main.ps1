@@ -40,7 +40,7 @@ $Data.Custom | ForEach-Object {
     if ($_.Data.GpoStatus -eq "AllsettingsDisabled" `
             -or $_.NoSettings `
             -or !$_.GpoHasTarget `
-            -or !$Linked) {
+            -or !$_.Linked) {
         $Action = "To Delete"
     }
     elseif ($_.LinkingError) {
