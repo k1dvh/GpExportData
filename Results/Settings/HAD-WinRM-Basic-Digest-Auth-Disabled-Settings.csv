@@ -1,6 +1,0 @@
-﻿"GPOName";"SettingCategory";"SettingPath";"SettingName";"SettingStatus";"Type";"Statement";"Value"
-"HAD-WinRM-Basic-Digest-Auth-Disabled";"Administrative Templates";"Windows Components/Windows Remote Management (WinRM)/WinRM Client";"Allow Basic authentication";"Disabled";;;
-"HAD-WinRM-Basic-Digest-Auth-Disabled";"Administrative Templates";"Windows Components/Windows Remote Management (WinRM)/WinRM Client";"Allow unencrypted traffic";"Disabled";;;
-"HAD-WinRM-Basic-Digest-Auth-Disabled";"Administrative Templates";"Windows Components/Windows Remote Management (WinRM)/WinRM Client";"Disallow Digest authentication";"Enabled";;;
-"HAD-WinRM-Basic-Digest-Auth-Disabled";"Administrative Templates";"Windows Components/Windows Remote Management (WinRM)/WinRM Service";"Allow Basic authentication";"Disabled";;;
-"HAD-WinRM-Basic-Digest-Auth-Disabled";"Administrative Templates";"Windows Components/Windows Remote Management (WinRM)/WinRM Service";"Allow unencrypted traffic";"Disabled";;;

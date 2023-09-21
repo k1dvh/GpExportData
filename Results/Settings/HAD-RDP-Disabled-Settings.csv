@@ -1,3 +1,0 @@
-﻿"GPOName";"SettingCategory";"SettingPath";"SettingName";"SettingStatus";"Type";"Statement";"Value"
-"HAD-RDP-Disabled";"System Services";;"TermService";"Disabled";;;
-"HAD-RDP-Disabled";"Administrative Templates";"Windows Components/Remote Desktop Services/Remote Desktop Session Host/Connections";"Allow users to connect remotely by using Remote Desktop Services";"Disabled";;;

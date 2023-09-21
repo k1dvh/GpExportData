@@ -1,2 +1,0 @@
-﻿"GPOName";"SettingCategory";"SettingPath";"SettingName";"SettingStatus";"Type";"Statement";"Value"
-"HAD-RDP-NLA-Enabled";"Administrative Templates";"Windows Components/Remote Desktop Services/Remote Desktop Session Host/Security";"Require user authentication for remote connections by using Network Level Authentication";"Enabled";;;

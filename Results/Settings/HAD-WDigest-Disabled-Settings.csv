@@ -1,2 +1,0 @@
-﻿"GPOName";"SettingCategory";"SettingPath";"SettingName";"SettingStatus";"Type";"Statement";"Value"
-"HAD-WDigest-Disabled";"Registry Settings";"SYSTEM\CurrentControlSet\Control\SecurityProviders\WDigest";"UseLogonCredential";;"REG_DWORD";;"00000000"

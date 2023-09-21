@@ -1,8 +1,0 @@
-﻿"GPOName";"Type";"Trustee";"TrusteeSID";"Inherited"
-"HAD-PageFile-Shutdown-Cleared";"GpoCustom";"G-S-T0-GPO_HAD-PageFile-Shutdown-Cleared_DENY";"S-1-5-21-1502320860-189160106-1795443177-1267";"False"
-"HAD-PageFile-Shutdown-Cleared";"GpoApply";"G-S-T0-GPO_HAD-PageFile-Shutdown-Cleared_APPLY";"S-1-5-21-1502320860-189160106-1795443177-1268";"False"
-"HAD-PageFile-Shutdown-Cleared";"GpoEditDeleteModifySecurity";"Domain Admins";"S-1-5-21-1502320860-189160106-1795443177-512";"False"
-"HAD-PageFile-Shutdown-Cleared";"GpoEditDeleteModifySecurity";"Enterprise Admins";"S-1-5-21-1502320860-189160106-1795443177-519";"False"
-"HAD-PageFile-Shutdown-Cleared";"GpoRead";"Authenticated Users";"S-1-5-11";"False"
-"HAD-PageFile-Shutdown-Cleared";"GpoRead";"ENTERPRISE DOMAIN CONTROLLERS";"S-1-5-9";"False"
-"HAD-PageFile-Shutdown-Cleared";"GpoEditDeleteModifySecurity";"SYSTEM";"S-1-5-18";"False"

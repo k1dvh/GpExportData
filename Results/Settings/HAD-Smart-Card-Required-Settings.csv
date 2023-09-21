@@ -1,2 +1,0 @@
-﻿"GPOName";"SettingCategory";"SettingPath";"SettingName";"SettingStatus";"Type";"Statement";"Value"
-"HAD-Smart-Card-Required";"Security Option";"Reg Path: MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\ScForceOption";"Interactive logon: Require Windows Hello for Business or smart card";"true";;;

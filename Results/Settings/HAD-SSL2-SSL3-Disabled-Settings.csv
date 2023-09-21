@@ -1,3 +1,0 @@
-﻿"GPOName";"SettingCategory";"SettingPath";"SettingName";"SettingStatus";"Type";"Statement";"Value"
-"HAD-SSL2-SSL3-Disabled";"Registry Settings";"SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Server";"Enabled";;"REG_DWORD";;"00000000"
-"HAD-SSL2-SSL3-Disabled";"Registry Settings";"SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0\Server";"Enabled";;"REG_DWORD";;"00000000"

@@ -1,8 +1,0 @@
-﻿"GPOName";"Type";"Trustee";"TrusteeSID";"Inherited"
-"HAD-Auto-Update-S3-Thu-0h-Srv";"GpoCustom";"G-S-T0-GPO_HAD-Auto-Update-S3-Thu-0h-Srv_DENY";"S-1-5-21-1502320860-189160106-1795443177-1161";"False"
-"HAD-Auto-Update-S3-Thu-0h-Srv";"GpoApply";"G-S-T0-GPO_HAD-Auto-Update-S3-Thu-0h-Srv_APPLY";"S-1-5-21-1502320860-189160106-1795443177-1162";"False"
-"HAD-Auto-Update-S3-Thu-0h-Srv";"GpoEditDeleteModifySecurity";"Domain Admins";"S-1-5-21-1502320860-189160106-1795443177-512";"False"
-"HAD-Auto-Update-S3-Thu-0h-Srv";"GpoEditDeleteModifySecurity";"Enterprise Admins";"S-1-5-21-1502320860-189160106-1795443177-519";"False"
-"HAD-Auto-Update-S3-Thu-0h-Srv";"GpoRead";"Authenticated Users";"S-1-5-11";"False"
-"HAD-Auto-Update-S3-Thu-0h-Srv";"GpoRead";"ENTERPRISE DOMAIN CONTROLLERS";"S-1-5-9";"False"
-"HAD-Auto-Update-S3-Thu-0h-Srv";"GpoEditDeleteModifySecurity";"SYSTEM";"S-1-5-18";"False"

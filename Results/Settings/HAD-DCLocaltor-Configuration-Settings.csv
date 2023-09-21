@@ -1,2 +1,0 @@
-﻿"GPOName";"SettingCategory";"SettingPath";"SettingName";"SettingStatus";"Type";"Statement";"Value"
-"HAD-DCLocaltor-Configuration";"Administrative Templates";"System/Net Logon/DC Locator DNS Records";"Specify DC Locator DNS records not registered by the DCs";"Enabled";;;

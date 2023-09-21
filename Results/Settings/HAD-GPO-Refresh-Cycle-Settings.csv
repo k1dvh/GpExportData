@@ -1,5 +1,0 @@
-﻿"GPOName";"SettingCategory";"SettingPath";"SettingName";"SettingStatus";"Type";"Statement";"Value"
-"HAD-GPO-Refresh-Cycle";"Administrative Templates";"System/Group Policy";"Configure registry policy processing";"Enabled";"Checkbox";"Do not apply during periodic background processing";"Disabled"
-"HAD-GPO-Refresh-Cycle";"Administrative Templates";"System/Group Policy";"Configure registry policy processing";"Enabled";"Checkbox";"Process even if the Group Policy objects have not changed";"Enabled"
-"HAD-GPO-Refresh-Cycle";"Administrative Templates";"System/Group Policy";"Set Group Policy refresh interval for computers";"Enabled";"Numeric";"System.Object[]";
-"HAD-GPO-Refresh-Cycle";"Administrative Templates";"System/Group Policy";"Set Group Policy refresh interval for computers";"Enabled";"Numeric";"System.Object[]";

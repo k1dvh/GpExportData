@@ -1,8 +1,0 @@
-﻿"GPOName";"Type";"Trustee";"TrusteeSID";"Inherited"
-"HAD-Print-Spooler-Disabled";"GpoCustom";"G-S-T0-GPO_HAD-Print-Spooler-Disabled_DENY";"S-1-5-21-1502320860-189160106-1795443177-1271";"False"
-"HAD-Print-Spooler-Disabled";"GpoApply";"G-S-T0-GPO_HAD-Print-Spooler-Disabled_APPLY";"S-1-5-21-1502320860-189160106-1795443177-1272";"False"
-"HAD-Print-Spooler-Disabled";"GpoEditDeleteModifySecurity";"Domain Admins";"S-1-5-21-1502320860-189160106-1795443177-512";"False"
-"HAD-Print-Spooler-Disabled";"GpoEditDeleteModifySecurity";"Enterprise Admins";"S-1-5-21-1502320860-189160106-1795443177-519";"False"
-"HAD-Print-Spooler-Disabled";"GpoRead";"Authenticated Users";"S-1-5-11";"False"
-"HAD-Print-Spooler-Disabled";"GpoRead";"ENTERPRISE DOMAIN CONTROLLERS";"S-1-5-9";"False"
-"HAD-Print-Spooler-Disabled";"GpoEditDeleteModifySecurity";"SYSTEM";"S-1-5-18";"False"

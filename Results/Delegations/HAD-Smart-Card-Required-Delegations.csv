@@ -1,8 +1,0 @@
-﻿"GPOName";"Type";"Trustee";"TrusteeSID";"Inherited"
-"HAD-Smart-Card-Required";"GpoCustom";"G-S-T0-GPO_HAD-Smart-Card-Required_DENY";"S-1-5-21-1502320860-189160106-1795443177-1287";"False"
-"HAD-Smart-Card-Required";"GpoApply";"G-S-T0-GPO_HAD-Smart-Card-Required_APPLY";"S-1-5-21-1502320860-189160106-1795443177-1288";"False"
-"HAD-Smart-Card-Required";"GpoEditDeleteModifySecurity";"Domain Admins";"S-1-5-21-1502320860-189160106-1795443177-512";"False"
-"HAD-Smart-Card-Required";"GpoEditDeleteModifySecurity";"Enterprise Admins";"S-1-5-21-1502320860-189160106-1795443177-519";"False"
-"HAD-Smart-Card-Required";"GpoRead";"Authenticated Users";"S-1-5-11";"False"
-"HAD-Smart-Card-Required";"GpoRead";"ENTERPRISE DOMAIN CONTROLLERS";"S-1-5-9";"False"
-"HAD-Smart-Card-Required";"GpoEditDeleteModifySecurity";"SYSTEM";"S-1-5-18";"False"

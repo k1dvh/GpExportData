@@ -1,6 +1,0 @@
-﻿"GPOName";"SettingCategory";"SettingPath";"SettingName";"SettingStatus";"Type";"Statement";"Value"
-"HAD-LAPS-Configuration";"Administrative Templates";"LAPS";"Do not allow password expiration time longer than required by policy";"Enabled";;;
-"HAD-LAPS-Configuration";"Administrative Templates";"LAPS";"Enable local admin password management";"Enabled";;;
-"HAD-LAPS-Configuration";"Administrative Templates";"LAPS";"Password Settings";"Enabled";"Numeric";;
-"HAD-LAPS-Configuration";"Administrative Templates";"LAPS";"Password Settings";"Enabled";"Numeric";;
-"HAD-LAPS-Configuration";"Administrative Templates";"LAPS";"Password Settings";"Enabled";"DropDownList";"Password Complexity";"Large letters + small letters + numbers + specials"

@@ -1,2 +1,0 @@
-﻿"GPOName";"SettingCategory";"SettingPath";"SettingName";"SettingStatus";"Type";"Statement";"Value"
-"HAD-LocalAdmins-PawT0";"Local Users And Groups";;"Local Group : Administrators (built-in)";"Member: OZ\L-S-LocalAdmins_%ComputerName%";;;"SID : "

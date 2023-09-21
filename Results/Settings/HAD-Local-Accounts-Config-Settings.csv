@@ -1,5 +1,0 @@
-﻿"GPOName";"SettingCategory";"SettingPath";"SettingName";"SettingStatus";"Type";"Statement";"Value"
-"HAD-Local-Accounts-Config";"Security Option";;"EnableAdminAccount";"Enabled";;;
-"HAD-Local-Accounts-Config";"Security Option";;"EnableGuestAccount";"Disabled";;;
-"HAD-Local-Accounts-Config";"Security Option";;"NewAdministratorName";"Enabled";;;
-"HAD-Local-Accounts-Config";"Security Option";;"NewGuestName";"Enabled";;;
