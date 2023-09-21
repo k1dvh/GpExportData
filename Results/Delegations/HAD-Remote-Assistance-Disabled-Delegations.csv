@@ -1,8 +1,0 @@
-﻿"GPOName";"Type";"Trustee";"TrusteeSID";"Inherited"
-"HAD-Remote-Assistance-Disabled";"GpoCustom";"G-S-T0-GPO_HAD-Remote-Assistance-Disabled_DENY";"S-1-5-21-1502320860-189160106-1795443177-1279";"False"
-"HAD-Remote-Assistance-Disabled";"GpoApply";"G-S-T0-GPO_HAD-Remote-Assistance-Disabled_APPLY";"S-1-5-21-1502320860-189160106-1795443177-1280";"False"
-"HAD-Remote-Assistance-Disabled";"GpoEditDeleteModifySecurity";"Domain Admins";"S-1-5-21-1502320860-189160106-1795443177-512";"False"
-"HAD-Remote-Assistance-Disabled";"GpoEditDeleteModifySecurity";"Enterprise Admins";"S-1-5-21-1502320860-189160106-1795443177-519";"False"
-"HAD-Remote-Assistance-Disabled";"GpoRead";"Authenticated Users";"S-1-5-11";"False"
-"HAD-Remote-Assistance-Disabled";"GpoRead";"ENTERPRISE DOMAIN CONTROLLERS";"S-1-5-9";"False"
-"HAD-Remote-Assistance-Disabled";"GpoEditDeleteModifySecurity";"SYSTEM";"S-1-5-18";"False"

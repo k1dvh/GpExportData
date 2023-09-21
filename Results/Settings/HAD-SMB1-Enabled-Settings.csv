@@ -1,2 +1,0 @@
-﻿"GPOName";"SettingCategory";"SettingPath";"SettingName";"SettingStatus";"Type";"Statement";"Value"
-"HAD-SMB1-Enabled";"Scripts";;"HAD_Configure_SMB1.ps1";;"Shutdown";"Order: 0";"RunPSFirst"

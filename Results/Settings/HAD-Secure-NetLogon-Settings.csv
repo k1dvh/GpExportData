@@ -1,6 +1,0 @@
-﻿"GPOName";"SettingCategory";"SettingPath";"SettingName";"SettingStatus";"Type";"Statement";"Value"
-"HAD-Secure-NetLogon";"Security Option";"Reg Path: MACHINE\System\CurrentControlSet\Services\Netlogon\Parameters\DisablePasswordChange";"Domain member: Disable machine account password changes";"false";;;
-"HAD-Secure-NetLogon";"Security Option";"Reg Path: MACHINE\System\CurrentControlSet\Services\Netlogon\Parameters\RequireSignOrSeal";"Domain member: Digitally encrypt or sign secure channel data (always)";"true";;;
-"HAD-Secure-NetLogon";"Security Option";"Reg Path: MACHINE\System\CurrentControlSet\Services\Netlogon\Parameters\RequireStrongKey";"Domain member: Require strong (Windows 2000 or later) session key";"true";;;
-"HAD-Secure-NetLogon";"Security Option";"Reg Path: MACHINE\System\CurrentControlSet\Services\Netlogon\Parameters\SealSecureChannel";"Domain member: Digitally encrypt secure channel data (when possible)";"true";;;
-"HAD-Secure-NetLogon";"Security Option";"Reg Path: MACHINE\System\CurrentControlSet\Services\Netlogon\Parameters\SignSecureChannel";"Domain member: Digitally sign secure channel data (when possible)";"true";;;

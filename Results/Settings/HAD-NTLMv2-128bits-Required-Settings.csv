@@ -1,5 +1,0 @@
-﻿"GPOName";"SettingCategory";"SettingPath";"SettingName";"SettingStatus";"Type";"Statement";"Value"
-"HAD-NTLMv2-128bits-Required";"Security Option";"Reg Path: MACHINE\System\CurrentControlSet\Control\Lsa\MSV1_0\NTLMMinClientSec";"Network security: Minimum session security for NTLM SSP based (including secure RPC) clients";;;"Require NTLMv2 session security";"true"
-"HAD-NTLMv2-128bits-Required";"Security Option";"Reg Path: MACHINE\System\CurrentControlSet\Control\Lsa\MSV1_0\NTLMMinClientSec";"Network security: Minimum session security for NTLM SSP based (including secure RPC) clients";;;"Require 128-bit encryption";"true"
-"HAD-NTLMv2-128bits-Required";"Security Option";"Reg Path: MACHINE\System\CurrentControlSet\Control\Lsa\MSV1_0\NTLMMinServerSec";"Network security: Minimum session security for NTLM SSP based (including secure RPC) servers";;;"Require NTLMv2 session security";"true"
-"HAD-NTLMv2-128bits-Required";"Security Option";"Reg Path: MACHINE\System\CurrentControlSet\Control\Lsa\MSV1_0\NTLMMinServerSec";"Network security: Minimum session security for NTLM SSP based (including secure RPC) servers";;;"Require 128-bit encryption";"true"

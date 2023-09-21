@@ -1,8 +1,0 @@
-﻿"GPOName";"Type";"Trustee";"TrusteeSID";"Inherited"
-"HAD-MSLive-Accounts-Disabled";"GpoCustom";"G-S-T0-GPO_HAD-MSLive-Acct-Disabled_DENY";"S-1-5-21-1502320860-189160106-1795443177-1257";"False"
-"HAD-MSLive-Accounts-Disabled";"GpoApply";"G-S-T0-GPO_HAD-MSLive-Acct-Disabled_APPLY";"S-1-5-21-1502320860-189160106-1795443177-1258";"False"
-"HAD-MSLive-Accounts-Disabled";"GpoEditDeleteModifySecurity";"Domain Admins";"S-1-5-21-1502320860-189160106-1795443177-512";"False"
-"HAD-MSLive-Accounts-Disabled";"GpoEditDeleteModifySecurity";"Enterprise Admins";"S-1-5-21-1502320860-189160106-1795443177-519";"False"
-"HAD-MSLive-Accounts-Disabled";"GpoRead";"Authenticated Users";"S-1-5-11";"False"
-"HAD-MSLive-Accounts-Disabled";"GpoRead";"ENTERPRISE DOMAIN CONTROLLERS";"S-1-5-9";"False"
-"HAD-MSLive-Accounts-Disabled";"GpoEditDeleteModifySecurity";"SYSTEM";"S-1-5-18";"False"

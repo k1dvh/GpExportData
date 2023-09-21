@@ -1,2 +1,0 @@
-﻿"GPOName";"SettingCategory";"SettingPath";"SettingName";"SettingStatus";"Type";"Statement";"Value"
-"HAD-PageFile-Shutdown-Cleared";"Security Option";"Reg Path: MACHINE\System\CurrentControlSet\Control\Session Manager\Memory Management\ClearPageFileAtShutdown";"Shutdown: Clear virtual memory pagefile";"true";;;

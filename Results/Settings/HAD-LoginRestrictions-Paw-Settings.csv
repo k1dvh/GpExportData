@@ -1,6 +1,0 @@
-﻿"GPOName";"SettingCategory";"SettingPath";"SettingName";"SettingStatus";"Type";"Statement";"Value"
-"HAD-LoginRestrictions-Paw";"Local Users And Groups";;"Local Group : Administrators (built-in)";"Member: HARDEN\L-S-T0_PawAccess_Logon";;;"SID : S-1-5-21-1502320860-189160106-1795443177-1123"
-"HAD-LoginRestrictions-Paw";"User Right Assignement";;"SeInteractiveLogonRight";"BUILTIN\Administrators";;;"SID: S-1-5-32-544"
-"HAD-LoginRestrictions-Paw";"User Right Assignement";;"SeInteractiveLogonRight";"OZ\L-S-T0_PawAccess_Logon";;;"SID: S-1-5-21-1502320860-189160106-1795443177-1123"
-"HAD-LoginRestrictions-Paw";"User Right Assignement";;"SeRemoteInteractiveLogonRight";"BUILTIN\Administrators";;;"SID: S-1-5-32-544"
-"HAD-LoginRestrictions-Paw";"User Right Assignement";;"SeRemoteInteractiveLogonRight";"BUILTIN\Remote Desktop Users";;;"SID: S-1-5-32-555"

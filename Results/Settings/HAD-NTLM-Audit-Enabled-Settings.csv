@@ -1,3 +1,0 @@
-﻿"GPOName";"SettingCategory";"SettingPath";"SettingName";"SettingStatus";"Type";"Statement";"Value"
-"HAD-NTLM-Audit-Enabled";"Registry Settings";"SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Channels\Microsoft-Windows-NTLM/Operational";"MaxSize";;"REG_DWORD";;"FA000000"
-"HAD-NTLM-Audit-Enabled";"Registry Settings";"SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Channels\Microsoft-Windows-NTLM/Operational";"MaxSizeUpper";;"REG_DWORD";;"00000000"

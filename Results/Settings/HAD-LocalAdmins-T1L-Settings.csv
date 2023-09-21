@@ -1,3 +1,0 @@
-﻿"GPOName";"SettingCategory";"SettingPath";"SettingName";"SettingStatus";"Type";"Statement";"Value"
-"HAD-LocalAdmins-T1L";"Local Users And Groups";;"Local Group : Administrators (built-in)";"Member: OZ\L-S-TL_LocalAdmins_Servers";;;"SID : "
-"HAD-LocalAdmins-T1L";"Local Users And Groups";;"Local Group : Administrators (built-in)";"Member: OZ\L-S_LocalAdmins_%ComputerName%";;;"SID : "

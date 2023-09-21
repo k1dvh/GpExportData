@@ -1,8 +1,0 @@
-﻿"GPOName";"Type";"Trustee";"TrusteeSID";"Inherited"
-"HAD-Camera-on-lockon-Disabled";"GpoCustom";"G-S-T0-GPO_HAD-Camera-on-lockon-Disabled_DENY";"S-1-5-21-1502320860-189160106-1795443177-1179";"False"
-"HAD-Camera-on-lockon-Disabled";"GpoApply";"G-S-T0-GPO_HAD-Camera-on-lockon-Disabled_APPLY";"S-1-5-21-1502320860-189160106-1795443177-1180";"False"
-"HAD-Camera-on-lockon-Disabled";"GpoEditDeleteModifySecurity";"Domain Admins";"S-1-5-21-1502320860-189160106-1795443177-512";"False"
-"HAD-Camera-on-lockon-Disabled";"GpoEditDeleteModifySecurity";"Enterprise Admins";"S-1-5-21-1502320860-189160106-1795443177-519";"False"
-"HAD-Camera-on-lockon-Disabled";"GpoRead";"Authenticated Users";"S-1-5-11";"False"
-"HAD-Camera-on-lockon-Disabled";"GpoRead";"ENTERPRISE DOMAIN CONTROLLERS";"S-1-5-9";"False"
-"HAD-Camera-on-lockon-Disabled";"GpoEditDeleteModifySecurity";"SYSTEM";"S-1-5-18";"False"

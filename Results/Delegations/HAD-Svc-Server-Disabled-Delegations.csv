@@ -1,8 +1,0 @@
-﻿"GPOName";"Type";"Trustee";"TrusteeSID";"Inherited"
-"HAD-Svc-Server-Disabled";"GpoCustom";"G-S-T0-GPO_HAD-Svc-Srv-Disabled_DENY";"S-1-5-21-1502320860-189160106-1795443177-1305";"False"
-"HAD-Svc-Server-Disabled";"GpoApply";"G-S-T0-GPO_HAD-Svc-Srv-Disabled_APPLY";"S-1-5-21-1502320860-189160106-1795443177-1306";"False"
-"HAD-Svc-Server-Disabled";"GpoEditDeleteModifySecurity";"Domain Admins";"S-1-5-21-1502320860-189160106-1795443177-512";"False"
-"HAD-Svc-Server-Disabled";"GpoEditDeleteModifySecurity";"Enterprise Admins";"S-1-5-21-1502320860-189160106-1795443177-519";"False"
-"HAD-Svc-Server-Disabled";"GpoRead";"Authenticated Users";"S-1-5-11";"False"
-"HAD-Svc-Server-Disabled";"GpoRead";"ENTERPRISE DOMAIN CONTROLLERS";"S-1-5-9";"False"
-"HAD-Svc-Server-Disabled";"GpoEditDeleteModifySecurity";"SYSTEM";"S-1-5-18";"False"

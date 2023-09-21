@@ -1,2 +1,0 @@
-﻿"GPOName";"SettingCategory";"SettingPath";"SettingName";"SettingStatus";"Type";"Statement";"Value"
-"HAD-FIPS-Enabled";"Security Option";"Reg Path: MACHINE\System\CurrentControlSet\Control\Lsa\FIPSAlgorithmPolicy\Enabled";"System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing";"true";;;
