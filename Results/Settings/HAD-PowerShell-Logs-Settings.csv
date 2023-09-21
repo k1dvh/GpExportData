@@ -1,0 +1,4 @@
+﻿"GPOName";"SettingCategory";"SettingPath";"SettingName";"SettingStatus";"Type";"Statement";"Value"
+"HAD-PowerShell-Logs";"Administrative Templates";"Windows Components/Windows PowerShell";"Turn on Module Logging";"Enabled";;;
+"HAD-PowerShell-Logs";"Administrative Templates";"Windows Components/Windows PowerShell";"Turn on PowerShell Script Block Logging";"Enabled";"Checkbox";"Log script block invocation start / stop events:";"Enabled"
+"HAD-PowerShell-Logs";"Administrative Templates";"Windows Components/Windows PowerShell";"Turn on PowerShell Transcription";"Enabled";"Checkbox";"Include invocation headers:";"Disabled"

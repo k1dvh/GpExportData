@@ -1,0 +1,4 @@
+﻿"GPOName";"SettingCategory";"SettingPath";"SettingName";"SettingStatus";"Type";"Statement";"Value"
+"HAD-LAPS-X64-Deployment";"Scripts";;"deploy-laps_x64.bat";;"Startup";"Order: 0";"PSNotConfigured"
+"HAD-LAPS-X64-Deployment";"Folders";"C:\Windows\HardenAD";"HardenAD";;;"Order: 1";"uid: {304864F5-C517-4A2F-862C-092F656E29ED}"
+"HAD-LAPS-X64-Deployment";"Folders";"C:\Windows\HardenAD\LAPS";"LAPS";;;"Order: 2";"uid: {36C0761D-E016-4E7C-87B9-4B2B170CD3EC}"

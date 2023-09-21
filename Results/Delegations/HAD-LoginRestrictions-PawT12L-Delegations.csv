@@ -1,0 +1,8 @@
+﻿"GPOName";"Type";"Trustee";"TrusteeSID";"Inherited"
+"HAD-LoginRestrictions-PawT12L";"GpoCustom";"G-S-T0-GPO_HAD-LoginRestrictions-PawT12L_DENY";"S-1-5-21-1502320860-189160106-1795443177-1241";"False"
+"HAD-LoginRestrictions-PawT12L";"GpoApply";"G-S-T0-GPO_HAD-LoginRestrictions-PawT12L_APPLY";"S-1-5-21-1502320860-189160106-1795443177-1242";"False"
+"HAD-LoginRestrictions-PawT12L";"GpoApply";"Authenticated Users";"S-1-5-11";"False"
+"HAD-LoginRestrictions-PawT12L";"GpoEditDeleteModifySecurity";"Domain Admins";"S-1-5-21-1502320860-189160106-1795443177-512";"False"
+"HAD-LoginRestrictions-PawT12L";"GpoEditDeleteModifySecurity";"Enterprise Admins";"S-1-5-21-1502320860-189160106-1795443177-519";"False"
+"HAD-LoginRestrictions-PawT12L";"GpoRead";"ENTERPRISE DOMAIN CONTROLLERS";"S-1-5-9";"False"
+"HAD-LoginRestrictions-PawT12L";"GpoEditDeleteModifySecurity";"SYSTEM";"S-1-5-18";"False"

@@ -1,0 +1,6 @@
+﻿"GPOName";"SettingCategory";"SettingPath";"SettingName";"SettingStatus";"Type";"Statement";"Value"
+"HAD-TS-Local-admins-groups";"Scripts";;"Import-HardenModules.bat";;"Startup";"Order: 0";"PSNotConfigured"
+"HAD-TS-Local-admins-groups";"Scheduled Task";;"HardenAD\HAD_Manage_Local_Administrators_Group";;;"RunAs: NT AUTHORITY\System";"uid: {2CE63049-895B-4F96-AEB8-6CA1C0110146}"
+"HAD-TS-Local-admins-groups";"Auditing";;"Audit Computer Account Management";"Success";;;
+"HAD-TS-Local-admins-groups";"Auditing";;"Audit Directory Service Access";"Success";;;
+"HAD-TS-Local-admins-groups";"Auditing";;"Audit Directory Service Changes";"Success";;;

@@ -1,0 +1,6 @@
+﻿"GPOName";"SettingCategory";"SettingPath";"SettingName";"SettingStatus";"Type";"Statement";"Value"
+"HAD-LoginRestrictions-PawT0";"Local Users And Groups";;"Local Group : Remote Desktop Users (built-in)";"Member: OZ\L-S-T0_PawT0_Logon";;;"SID : S-1-5-21-1502320860-189160106-1795443177-1124"
+"HAD-LoginRestrictions-PawT0";"User Right Assignement";;"SeInteractiveLogonRight";"BUILTIN\Administrators";;;"SID: S-1-5-32-544"
+"HAD-LoginRestrictions-PawT0";"User Right Assignement";;"SeInteractiveLogonRight";"OZ\L-S-T0_PawT0_Logon";;;"SID: S-1-5-21-1502320860-189160106-1795443177-1124"
+"HAD-LoginRestrictions-PawT0";"User Right Assignement";;"SeRemoteInteractiveLogonRight";"BUILTIN\Administrators";;;"SID: S-1-5-32-544"
+"HAD-LoginRestrictions-PawT0";"User Right Assignement";;"SeRemoteInteractiveLogonRight";"BUILTIN\Remote Desktop Users";;;"SID: S-1-5-32-555"

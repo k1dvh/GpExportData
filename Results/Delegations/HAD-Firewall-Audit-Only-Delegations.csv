@@ -1,0 +1,8 @@
+﻿"GPOName";"Type";"Trustee";"TrusteeSID";"Inherited"
+"HAD-Firewall-Audit-Only";"GpoCustom";"G-S-T0-GPO_HAD-Fwl-Audit-Only_DENY";"S-1-5-21-1502320860-189160106-1795443177-1187";"False"
+"HAD-Firewall-Audit-Only";"GpoApply";"G-S-T0-GPO_HAD-Fwl-Audit-Only_APPLY";"S-1-5-21-1502320860-189160106-1795443177-1188";"False"
+"HAD-Firewall-Audit-Only";"GpoEditDeleteModifySecurity";"Domain Admins";"S-1-5-21-1502320860-189160106-1795443177-512";"False"
+"HAD-Firewall-Audit-Only";"GpoEditDeleteModifySecurity";"Enterprise Admins";"S-1-5-21-1502320860-189160106-1795443177-519";"False"
+"HAD-Firewall-Audit-Only";"GpoRead";"Authenticated Users";"S-1-5-11";"False"
+"HAD-Firewall-Audit-Only";"GpoRead";"ENTERPRISE DOMAIN CONTROLLERS";"S-1-5-9";"False"
+"HAD-Firewall-Audit-Only";"GpoEditDeleteModifySecurity";"SYSTEM";"S-1-5-18";"False"

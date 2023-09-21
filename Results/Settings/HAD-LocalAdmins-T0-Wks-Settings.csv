@@ -1,0 +1,3 @@
+﻿"GPOName";"SettingCategory";"SettingPath";"SettingName";"SettingStatus";"Type";"Statement";"Value"
+"HAD-LocalAdmins-T0-Wks";"Local Users And Groups";;"Local Group : Administrators (built-in)";"Member: OZ\L-S-T0_LocalAdmins_Workstations";;;"SID : S-1-5-21-1502320860-189160106-1795443177-1119"
+"HAD-LocalAdmins-T0-Wks";"Local Users And Groups";;"Local Group : Administrators (built-in)";"Member: OZ\L-S_LocalAdmins_%ComputerName%";;;"SID : "

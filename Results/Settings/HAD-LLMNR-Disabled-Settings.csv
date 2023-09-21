@@ -1,0 +1,2 @@
+﻿"GPOName";"SettingCategory";"SettingPath";"SettingName";"SettingStatus";"Type";"Statement";"Value"
+"HAD-LLMNR-Disabled";"Administrative Templates";"Network/DNS Client";"Turn off multicast name resolution";"Enabled";;;

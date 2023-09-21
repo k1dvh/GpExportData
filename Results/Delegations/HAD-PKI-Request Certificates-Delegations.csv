@@ -1,0 +1,6 @@
+﻿"GPOName";"Type";"Trustee";"TrusteeSID";"Inherited"
+"HAD-PKI-Request Certificates";"GpoApply";"OZ-CA-01$";"S-1-5-21-1502320860-189160106-1795443177-1105";"False"
+"HAD-PKI-Request Certificates";"GpoEditDeleteModifySecurity";"Enterprise Admins";"S-1-5-21-1502320860-189160106-1795443177-519";"False"
+"HAD-PKI-Request Certificates";"GpoEditDeleteModifySecurity";"Domain Admins";"S-1-5-21-1502320860-189160106-1795443177-512";"False"
+"HAD-PKI-Request Certificates";"GpoRead";"ENTERPRISE DOMAIN CONTROLLERS";"S-1-5-9";"False"
+"HAD-PKI-Request Certificates";"GpoEditDeleteModifySecurity";"SYSTEM";"S-1-5-18";"False"

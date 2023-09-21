@@ -1,0 +1,51 @@
+﻿"GPOName";"SettingCategory";"SettingPath";"SettingName";"SettingStatus";"Type";"Statement";"Value"
+"HAD-Auto-Update-Win10-11";"Administrative Templates";"Windows Components/Delivery Optimization";"Absolute Max Cache Size (in GB)";"Enabled";"Numeric";"The default value is 10GB";
+"HAD-Auto-Update-Win10-11";"Administrative Templates";"Windows Components/Delivery Optimization";"Allow uploads while the device is on battery while under set Battery level (percentage)";"Enabled";"Numeric";"The default value is 0 (unlimited)";
+"HAD-Auto-Update-Win10-11";"Administrative Templates";"Windows Components/Delivery Optimization";"Download Mode";"Enabled";"DropDownList";"Download Mode:";"LAN (1)"
+"HAD-Auto-Update-Win10-11";"Administrative Templates";"Windows Components/Delivery Optimization";"Enable Peer Caching while the device connects via VPN";"Disabled";;;
+"HAD-Auto-Update-Win10-11";"Administrative Templates";"Windows Components/Delivery Optimization";"Max Cache Size (percentage)";"Enabled";"Numeric";"The default value is 20%";
+"HAD-Auto-Update-Win10-11";"Administrative Templates";"Windows Components/Delivery Optimization";"Minimum disk size allowed to use Peer Caching (in GB)";"Enabled";"Numeric";"The default value is 32GB";
+"HAD-Auto-Update-Win10-11";"Administrative Templates";"Windows Components/Delivery Optimization";"Select a method to restrict Peer Selection";"Enabled";"DropDownList";"Restrict Peer Selection By:";"Subnet"
+"HAD-Auto-Update-Win10-11";"Administrative Templates";"Windows Components/Maintenance Scheduler";"Automatic Maintenance Activation Boundary";"Enabled";;;
+"HAD-Auto-Update-Win10-11";"Administrative Templates";"Windows Components/Windows Update";"Allow Automatic Updates immediate installation";"Enabled";;;
+"HAD-Auto-Update-Win10-11";"Administrative Templates";"Windows Components/Windows Update";"Allow updates to be downloaded automatically over metered connections";"Disabled";;;
+"HAD-Auto-Update-Win10-11";"Administrative Templates";"Windows Components/Windows Update";"Always automatically restart at the scheduled time";"Disabled";;;
+"HAD-Auto-Update-Win10-11";"Administrative Templates";"Windows Components/Windows Update";"Automatic Updates detection frequency";"Enabled";"Numeric";"Check for updates at the following";
+"HAD-Auto-Update-Win10-11";"Administrative Templates";"Windows Components/Windows Update";"Configure Automatic Updates";"Enabled";"Checkbox";"Install during automatic maintenance";"Disabled"
+"HAD-Auto-Update-Win10-11";"Administrative Templates";"Windows Components/Windows Update";"Configure Automatic Updates";"Enabled";"Checkbox";"Every week";"Enabled"
+"HAD-Auto-Update-Win10-11";"Administrative Templates";"Windows Components/Windows Update";"Configure Automatic Updates";"Enabled";"Checkbox";"First week of the month";"Enabled"
+"HAD-Auto-Update-Win10-11";"Administrative Templates";"Windows Components/Windows Update";"Configure Automatic Updates";"Enabled";"Checkbox";"Second week of the month";"Enabled"
+"HAD-Auto-Update-Win10-11";"Administrative Templates";"Windows Components/Windows Update";"Configure Automatic Updates";"Enabled";"Checkbox";"Third week of the month";"Enabled"
+"HAD-Auto-Update-Win10-11";"Administrative Templates";"Windows Components/Windows Update";"Configure Automatic Updates";"Enabled";"Checkbox";"Fourth week of the month";"Enabled"
+"HAD-Auto-Update-Win10-11";"Administrative Templates";"Windows Components/Windows Update";"Configure Automatic Updates";"Enabled";"Checkbox";"Install updates for other Microsoft products";"Disabled"
+"HAD-Auto-Update-Win10-11";"Administrative Templates";"Windows Components/Windows Update";"Configure Automatic Updates";"Enabled";"DropDownList";"Configure automatic updating:";"4 - Auto download and schedule the install"
+"HAD-Auto-Update-Win10-11";"Administrative Templates";"Windows Components/Windows Update";"Configure Automatic Updates";"Enabled";"DropDownList";"Scheduled install day: ";"5 - Every Thursday"
+"HAD-Auto-Update-Win10-11";"Administrative Templates";"Windows Components/Windows Update";"Configure Automatic Updates";"Enabled";"DropDownList";"Scheduled install time:";"13:00"
+"HAD-Auto-Update-Win10-11";"Administrative Templates";"Windows Components/Windows Update";"Configure auto-restart reminder notifications for updates";"Enabled";"DropDownList";"Period (min): ";"60"
+"HAD-Auto-Update-Win10-11";"Administrative Templates";"Windows Components/Windows Update";"Configure auto-restart required notification for updates";"Enabled";"DropDownList";"Method: ";"2 - User Action"
+"HAD-Auto-Update-Win10-11";"Administrative Templates";"Windows Components/Windows Update";"Configure auto-restart warning notifications schedule for updates";"Enabled";"DropDownList";"Reminder (hours): ";"4"
+"HAD-Auto-Update-Win10-11";"Administrative Templates";"Windows Components/Windows Update";"Configure auto-restart warning notifications schedule for updates";"Enabled";"DropDownList";"Warning (mins): ";"15"
+"HAD-Auto-Update-Win10-11";"Administrative Templates";"Windows Components/Windows Update";"Display options for update notifications";"Enabled";"DropDownList";"Specify the update notifications display options :";"0 (default) – Default OS Windows Update notifications"
+"HAD-Auto-Update-Win10-11";"Administrative Templates";"Windows Components/Windows Update";"Do not adjust default option to 'Install Updates and Shut Down' in Shut Down Windows dialog box";"Disabled";;;
+"HAD-Auto-Update-Win10-11";"Administrative Templates";"Windows Components/Windows Update";"Do not display 'Install Updates and Shut Down' option in Shut Down Windows dialog box";"Disabled";;;
+"HAD-Auto-Update-Win10-11";"Administrative Templates";"Windows Components/Windows Update";"Do not include drivers with Windows Updates";"Enabled";;;
+"HAD-Auto-Update-Win10-11";"Administrative Templates";"Windows Components/Windows Update";"Enabling Windows Update Power Management to automatically wake up the system to install scheduled updates";"Disabled";;;
+"HAD-Auto-Update-Win10-11";"Administrative Templates";"Windows Components/Windows Update";"No auto-restart with logged on users for scheduled automatic updates installations";"Disabled";;;
+"HAD-Auto-Update-Win10-11";"Administrative Templates";"Windows Components/Windows Update";"Remove access to ""Pause updates"" feature";"Enabled";;;
+"HAD-Auto-Update-Win10-11";"Administrative Templates";"Windows Components/Windows Update";"Remove access to use all Windows Update features";"Disabled";;;
+"HAD-Auto-Update-Win10-11";"Administrative Templates";"Windows Components/Windows Update";"Specify active hours range for auto-restarts";"Enabled";"DropDownList";"Max range: ";"18"
+"HAD-Auto-Update-Win10-11";"Administrative Templates";"Windows Components/Windows Update";"Specify deadlines for automatic updates and restarts";"Enabled";"Checkbox";"Don't auto-restart until end of grace period";"Disabled"
+"HAD-Auto-Update-Win10-11";"Administrative Templates";"Windows Components/Windows Update";"Specify deadlines for automatic updates and restarts";"Enabled";"DropDownList";"Deadline (days):";"7"
+"HAD-Auto-Update-Win10-11";"Administrative Templates";"Windows Components/Windows Update";"Specify deadlines for automatic updates and restarts";"Enabled";"DropDownList";"Grace period (days):";"3"
+"HAD-Auto-Update-Win10-11";"Administrative Templates";"Windows Components/Windows Update";"Specify deadlines for automatic updates and restarts";"Enabled";"DropDownList";"Deadline (days):";"7"
+"HAD-Auto-Update-Win10-11";"Administrative Templates";"Windows Components/Windows Update";"Specify deadlines for automatic updates and restarts";"Enabled";"DropDownList";"Grace Period (days):";
+"HAD-Auto-Update-Win10-11";"Administrative Templates";"Windows Components/Windows Update";"Turn off auto-restart for updates during active hours";"Enabled";"DropDownList";"Start: ";"8 AM"
+"HAD-Auto-Update-Win10-11";"Administrative Templates";"Windows Components/Windows Update";"Turn off auto-restart for updates during active hours";"Enabled";"DropDownList";"End:";"7 PM"
+"HAD-Auto-Update-Win10-11";"Administrative Templates";"Windows Components/Windows Update";"Turn off auto-restart notifications for update installations";"Disabled";;;
+"HAD-Auto-Update-Win10-11";"Administrative Templates";"Windows Components/Windows Update";"Turn on recommended updates via Automatic Updates";"Enabled";;;
+"HAD-Auto-Update-Win10-11";"Administrative Templates";"Windows Components/Windows Update";"Turn on Software Notifications";"Disabled";;;
+"HAD-Auto-Update-Win10-11";"Administrative Templates";"Windows Components/Windows Update/Windows Update for Business";"Select when Preview Builds and Feature Updates are received";"Enabled";"Numeric";"(format yyyy-mm-dd example: 2016-10-30)";
+"HAD-Auto-Update-Win10-11";"Administrative Templates";"Windows Components/Windows Update/Windows Update for Business";"Select when Quality Updates are received";"Enabled";"Numeric";"(format yyyy-mm-dd example: 2016-10-30)";
+"HAD-Auto-Update-Win10-11";"Registry Settings";"Software\Policies\Microsoft\Windows\WindowsUpdate";"ManagePreviewBuilds";;;;"1"
+"HAD-Auto-Update-Win10-11";"Registry Settings";"Software\Policies\Microsoft\Windows\WindowsUpdate";"ManagePreviewBuildsPolicyValue";;;;"0"
+"HAD-Auto-Update-Win10-11";"Registry Settings";"Software\Policies\Microsoft\Windows\WindowsUpdate";"BranchReadinessLevel";;;;"16"

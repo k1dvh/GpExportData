@@ -1,0 +1,8 @@
+﻿"GPOName";"Type";"Trustee";"TrusteeSID";"Inherited"
+"HAD-SMB1-Client-Only-Enabled";"GpoCustom";"G-S-T0-GPO_HAD-SMB1-Client-Only-Enabled_DENY";"S-1-5-21-1502320860-189160106-1795443177-1293";"False"
+"HAD-SMB1-Client-Only-Enabled";"GpoApply";"G-S-T0-GPO_HAD-SMB1-Client-Only-Enabled_APPLY";"S-1-5-21-1502320860-189160106-1795443177-1294";"False"
+"HAD-SMB1-Client-Only-Enabled";"GpoEditDeleteModifySecurity";"Domain Admins";"S-1-5-21-1502320860-189160106-1795443177-512";"False"
+"HAD-SMB1-Client-Only-Enabled";"GpoEditDeleteModifySecurity";"Enterprise Admins";"S-1-5-21-1502320860-189160106-1795443177-519";"False"
+"HAD-SMB1-Client-Only-Enabled";"GpoRead";"Authenticated Users";"S-1-5-11";"False"
+"HAD-SMB1-Client-Only-Enabled";"GpoRead";"ENTERPRISE DOMAIN CONTROLLERS";"S-1-5-9";"False"
+"HAD-SMB1-Client-Only-Enabled";"GpoEditDeleteModifySecurity";"SYSTEM";"S-1-5-18";"False"

@@ -1,0 +1,4 @@
+﻿"GPOName";"SettingCategory";"SettingPath";"SettingName";"SettingStatus";"Type";"Statement";"Value"
+"HAD-RDP-Enabled";"System Services";;"TermService";"Automatic";;;
+"HAD-RDP-Enabled";"Firewall Inbound rule";"In";"Inbound Rule for RDP Port 3389";;;"Allow";"3389"
+"HAD-RDP-Enabled";"Administrative Templates";"Windows Components/Remote Desktop Services/Remote Desktop Session Host/Connections";"Allow users to connect remotely by using Remote Desktop Services";"Enabled";;;

@@ -1,0 +1,6 @@
+﻿"GPOName";"SettingCategory";"SettingPath";"SettingName";"SettingStatus";"Type";"Statement";"Value"
+"HAD-SMB1-Audit-Enabled";"Scripts";;"HAD_SMB1_Audit_Enabled.bat";;"Startup";"Order: 0";"PSNotConfigured"
+"HAD-SMB1-Audit-Enabled";"Folders";"C:\Windows\HardenAD";"HardenAD";;;"Order: 1";"uid: {BD8C763F-75C0-4D2E-B927-896F3F0B8B23}"
+"HAD-SMB1-Audit-Enabled";"Folders";"C:\Windows\HardenAD\SMB";"SMB";;;"Order: 2";"uid: {D6FA4C97-9210-443D-AA73-2D306EC4F463}"
+"HAD-SMB1-Audit-Enabled";"Folders";"C:\Windows\HardenAD\Logs";"Logs";;;"Order: 3";"uid: {4F9C4442-C67E-4CFD-BF2B-0AC1103B156A}"
+"HAD-SMB1-Audit-Enabled";"Scheduled Task";;"HardenAD - Audit SMB1";;;"RunAs: NT AUTHORITY\System";"uid: {DF772750-784F-42FB-B637-A3D37AF4F329}"

@@ -1,0 +1,6 @@
+﻿"GPOName";"Type";"Trustee";"TrusteeSID";"Inherited"
+"Default Domain Policy";"GpoCustom";"Domain Admins";"S-1-5-21-1502320860-189160106-1795443177-512";"False"
+"Default Domain Policy";"GpoCustom";"Enterprise Admins";"S-1-5-21-1502320860-189160106-1795443177-519";"False"
+"Default Domain Policy";"GpoEditDeleteModifySecurity";"SYSTEM";"S-1-5-18";"False"
+"Default Domain Policy";"GpoApply";"Authenticated Users";"S-1-5-11";"False"
+"Default Domain Policy";"GpoRead";"ENTERPRISE DOMAIN CONTROLLERS";"S-1-5-9";"False"
