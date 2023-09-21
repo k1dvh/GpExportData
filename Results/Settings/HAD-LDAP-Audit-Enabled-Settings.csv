@@ -1,0 +1,3 @@
+﻿"GPOName";"SettingCategory";"SettingPath";"SettingName";"SettingStatus";"Type";"Statement";"Value"
+"HAD-LDAP-Audit-Enabled";"Registry Settings";"SYSTEM\CurrentControlSet\Services\NTDS\Diagnostics";"16 LDAP Interface Events";;"REG_DWORD";;"00000002"
+"HAD-LDAP-Audit-Enabled";"Registry Settings";"SYSTEM\CurrentControlSet\Services\EventLog\Directory Service";"MaxSize";;"REG_DWORD";;"3E800000"

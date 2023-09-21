@@ -1,0 +1,8 @@
+﻿"GPOName";"Type";"Trustee";"TrusteeSID";"Inherited"
+"HAD-DistributedFileSystem-Disabled";"GpoCustom";"G-S-T0-GPO_HAD-DistributedFileSystem-Disabled_DENY";"S-1-5-21-1502320860-189160106-1795443177-1183";"False"
+"HAD-DistributedFileSystem-Disabled";"GpoApply";"G-S-T0-GPO_HAD-DistributedFileSystem-Disabled_APPLY";"S-1-5-21-1502320860-189160106-1795443177-1184";"False"
+"HAD-DistributedFileSystem-Disabled";"GpoEditDeleteModifySecurity";"Domain Admins";"S-1-5-21-1502320860-189160106-1795443177-512";"False"
+"HAD-DistributedFileSystem-Disabled";"GpoEditDeleteModifySecurity";"Enterprise Admins";"S-1-5-21-1502320860-189160106-1795443177-519";"False"
+"HAD-DistributedFileSystem-Disabled";"GpoRead";"Authenticated Users";"S-1-5-11";"False"
+"HAD-DistributedFileSystem-Disabled";"GpoRead";"ENTERPRISE DOMAIN CONTROLLERS";"S-1-5-9";"False"
+"HAD-DistributedFileSystem-Disabled";"GpoEditDeleteModifySecurity";"SYSTEM";"S-1-5-18";"False"

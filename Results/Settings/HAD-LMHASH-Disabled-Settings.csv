@@ -1,0 +1,2 @@
+﻿"GPOName";"SettingCategory";"SettingPath";"SettingName";"SettingStatus";"Type";"Statement";"Value"
+"HAD-LMHASH-Disabled";"Security Option";"Reg Path: MACHINE\System\CurrentControlSet\Control\Lsa\NoLMHash";"Network security: Do not store LAN Manager hash value on next password change";"true";;;

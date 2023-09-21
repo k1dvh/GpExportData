@@ -1,0 +1,8 @@
+﻿"GPOName";"Type";"Trustee";"TrusteeSID";"Inherited"
+"HAD-LDAP-Client-Signing-Not-Required";"GpoCustom";"G-S-T0-GPO_HAD-LDAP-Client-Signing-Not-Required_DENY";"S-1-5-21-1502320860-189160106-1795443177-1207";"False"
+"HAD-LDAP-Client-Signing-Not-Required";"GpoApply";"G-S-T0-GPO_HAD-LDAP-Client-Signing-Not-Required_APPLY";"S-1-5-21-1502320860-189160106-1795443177-1208";"False"
+"HAD-LDAP-Client-Signing-Not-Required";"GpoEditDeleteModifySecurity";"Domain Admins";"S-1-5-21-1502320860-189160106-1795443177-512";"False"
+"HAD-LDAP-Client-Signing-Not-Required";"GpoEditDeleteModifySecurity";"Enterprise Admins";"S-1-5-21-1502320860-189160106-1795443177-519";"False"
+"HAD-LDAP-Client-Signing-Not-Required";"GpoRead";"Authenticated Users";"S-1-5-11";"False"
+"HAD-LDAP-Client-Signing-Not-Required";"GpoRead";"ENTERPRISE DOMAIN CONTROLLERS";"S-1-5-9";"False"
+"HAD-LDAP-Client-Signing-Not-Required";"GpoEditDeleteModifySecurity";"SYSTEM";"S-1-5-18";"False"

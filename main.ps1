@@ -39,11 +39,9 @@ $Data.Custom | ForEach-Object {
 
     if ($_.Data.GpoStatus -eq "AllsettingsDisabled" `
             -or $_.NoSettings `
-            -or !$_.GpoHasTarget) {
+            -or !$_.GpoHasTarget `
+            -or !$Linked) {
         $Action = "To Delete"
-
-        Write-Host $_.Data.DisplayName -ForegroundColor Magenta
-        Write-Host "Status: $($_.Data.GpoStatus)`nNoSettings: $($_.NoSettings)`nTarget: $($_.GpoHasTarget)"
     }
     elseif ($_.LinkingError) {
         $Action = "To Analyse"
@@ -60,6 +58,7 @@ $Data.Custom | ForEach-Object {
         UserSettings     = $_.UserSettings
         ComputerSettings = $_.ComputerSettings
         Linked           = $_.Linked
+        LinkingError     = $_.LinkingError
         Links            = $_.ConcatenatedLinks
         GPOHasTargets    = $_.GpoHasTarget
         Targets          = $_.Targets
@@ -67,7 +66,7 @@ $Data.Custom | ForEach-Object {
     }
 }
 
-Get-ChildItem $Config.Settings.FullName -filter "*.csv" | % {
+Get-ChildItem $Config.Settings.FullName -Filter "*.csv" | ForEach-Object {
     Import-Csv $_.FullName | Export-Csv "$($Config.Results.FullName)\AllSettings.csv" -NoTypeInformation -Delimiter ";" -Encoding UTF8 -Append
 }
 

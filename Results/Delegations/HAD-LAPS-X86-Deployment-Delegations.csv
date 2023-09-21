@@ -1,0 +1,8 @@
+﻿"GPOName";"Type";"Trustee";"TrusteeSID";"Inherited"
+"HAD-LAPS-X86-Deployment";"GpoCustom";"G-S-T0-GPO_HAD-LAPS-X86-Deployment_DENY";"S-1-5-21-1502320860-189160106-1795443177-1201";"False"
+"HAD-LAPS-X86-Deployment";"GpoApply";"G-S-T0-GPO_HAD-LAPS-X86-Deployment_APPLY";"S-1-5-21-1502320860-189160106-1795443177-1202";"False"
+"HAD-LAPS-X86-Deployment";"GpoEditDeleteModifySecurity";"Domain Admins";"S-1-5-21-1502320860-189160106-1795443177-512";"False"
+"HAD-LAPS-X86-Deployment";"GpoEditDeleteModifySecurity";"Enterprise Admins";"S-1-5-21-1502320860-189160106-1795443177-519";"False"
+"HAD-LAPS-X86-Deployment";"GpoRead";"Authenticated Users";"S-1-5-11";"False"
+"HAD-LAPS-X86-Deployment";"GpoRead";"ENTERPRISE DOMAIN CONTROLLERS";"S-1-5-9";"False"
+"HAD-LAPS-X86-Deployment";"GpoEditDeleteModifySecurity";"SYSTEM";"S-1-5-18";"False"

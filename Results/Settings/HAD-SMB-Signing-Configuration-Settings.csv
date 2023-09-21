@@ -1,0 +1,4 @@
+﻿"GPOName";"SettingCategory";"SettingPath";"SettingName";"SettingStatus";"Type";"Statement";"Value"
+"HAD-SMB-Signing-Configuration";"Security Option";"Reg Path: MACHINE\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\EnablePlainTextPassword";"Microsoft network client: Send unencrypted password to third-party SMB servers";"false";;;
+"HAD-SMB-Signing-Configuration";"Security Option";"Reg Path: MACHINE\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\EnableSecuritySignature";"Microsoft network client: Digitally sign communications (if server agrees)";"true";;;
+"HAD-SMB-Signing-Configuration";"Security Option";"Reg Path: MACHINE\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\RequireSecuritySignature";"Microsoft network client: Digitally sign communications (always)";"true";;;

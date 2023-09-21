@@ -1,0 +1,3 @@
+﻿"GPOName";"Link";"Enabled";"GPOStatus"
+"HAD-LocalAdmins-T2";"oswald.com/OZ_T12";"true";"OK"
+"HAD-LocalAdmins-T2";"oswald.com/Provisioning/Computers";"true";"Computer Misconfiguration"

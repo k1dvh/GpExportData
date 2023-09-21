@@ -1,0 +1,40 @@
+﻿"GPOName";"SettingCategory";"SettingPath";"SettingName";"SettingStatus";"Type";"Statement";"Value"
+"HAD-Firewall-Audit-Only";"Firewall Rules";"DomainProfile";"AllowLocalIPsecPolicyMerge";"true";;;
+"HAD-Firewall-Audit-Only";"Firewall Rules";"DomainProfile";"AllowLocalPolicyMerge";"true";;;
+"HAD-Firewall-Audit-Only";"Firewall Rules";"DomainProfile";"DefaultInboundAction";"false";;;
+"HAD-Firewall-Audit-Only";"Firewall Rules";"DomainProfile";"DefaultOutboundAction";"false";;;
+"HAD-Firewall-Audit-Only";"Firewall Rules";"DomainProfile";"DisableNotifications";"true";;;
+"HAD-Firewall-Audit-Only";"Firewall Rules";"DomainProfile";"DisableUnicastResponsesToMulticastBroadcast";"false";;;
+"HAD-Firewall-Audit-Only";"Firewall Rules";"DomainProfile";"EnableFirewall";"true";;;
+"HAD-Firewall-Audit-Only";"Firewall Rules";"DomainProfile";"LogDroppedPackets";"true";;;
+"HAD-Firewall-Audit-Only";"Firewall Rules";"DomainProfile";"LogFilePath";"%systemroot%\system32\logfiles\firewall\domainfw.log";;;
+"HAD-Firewall-Audit-Only";"Firewall Rules";"DomainProfile";"LogFileSize";"32767";;;
+"HAD-Firewall-Audit-Only";"Firewall Rules";"DomainProfile";"LogSuccessfulConnections";"true";;;
+"HAD-Firewall-Audit-Only";"Firewall Rules";"PrivateProfile";"AllowLocalIPsecPolicyMerge";"true";;;
+"HAD-Firewall-Audit-Only";"Firewall Rules";"PrivateProfile";"AllowLocalPolicyMerge";"true";;;
+"HAD-Firewall-Audit-Only";"Firewall Rules";"PrivateProfile";"DefaultInboundAction";"false";;;
+"HAD-Firewall-Audit-Only";"Firewall Rules";"PrivateProfile";"DefaultOutboundAction";"false";;;
+"HAD-Firewall-Audit-Only";"Firewall Rules";"PrivateProfile";"DisableNotifications";"true";;;
+"HAD-Firewall-Audit-Only";"Firewall Rules";"PrivateProfile";"DisableUnicastResponsesToMulticastBroadcast";"false";;;
+"HAD-Firewall-Audit-Only";"Firewall Rules";"PrivateProfile";"EnableFirewall";"true";;;
+"HAD-Firewall-Audit-Only";"Firewall Rules";"PrivateProfile";"LogDroppedPackets";"true";;;
+"HAD-Firewall-Audit-Only";"Firewall Rules";"PrivateProfile";"LogFilePath";"%systemroot%\system32\logfiles\firewall\privatefwl.log";;;
+"HAD-Firewall-Audit-Only";"Firewall Rules";"PrivateProfile";"LogFileSize";"4096";;;
+"HAD-Firewall-Audit-Only";"Firewall Rules";"PrivateProfile";"LogSuccessfulConnections";"true";;;
+"HAD-Firewall-Audit-Only";"Firewall Rules";"PublicProfile";"AllowLocalIPsecPolicyMerge";"true";;;
+"HAD-Firewall-Audit-Only";"Firewall Rules";"PublicProfile";"AllowLocalPolicyMerge";"true";;;
+"HAD-Firewall-Audit-Only";"Firewall Rules";"PublicProfile";"DefaultInboundAction";"false";;;
+"HAD-Firewall-Audit-Only";"Firewall Rules";"PublicProfile";"DefaultOutboundAction";"false";;;
+"HAD-Firewall-Audit-Only";"Firewall Rules";"PublicProfile";"DisableNotifications";"true";;;
+"HAD-Firewall-Audit-Only";"Firewall Rules";"PublicProfile";"DisableUnicastResponsesToMulticastBroadcast";"false";;;
+"HAD-Firewall-Audit-Only";"Firewall Rules";"PublicProfile";"EnableFirewall";"true";;;
+"HAD-Firewall-Audit-Only";"Firewall Rules";"PublicProfile";"LogDroppedPackets";"true";;;
+"HAD-Firewall-Audit-Only";"Firewall Rules";"PublicProfile";"LogFilePath";"%systemroot%\system32\logfiles\firewall\publicfw.log";;;
+"HAD-Firewall-Audit-Only";"Firewall Rules";"PublicProfile";"LogFileSize";"4096";;;
+"HAD-Firewall-Audit-Only";"Firewall Rules";"PublicProfile";"LogSuccessfulConnections";"true";;;
+"HAD-Firewall-Audit-Only";"Administrative Templates";"Network/Network Connections/Windows Defender Firewall/Domain Profile";"Windows Defender Firewall: Allow logging";"Enabled";"Checkbox";"Log dropped packets";"Enabled"
+"HAD-Firewall-Audit-Only";"Administrative Templates";"Network/Network Connections/Windows Defender Firewall/Domain Profile";"Windows Defender Firewall: Allow logging";"Enabled";"Checkbox";"Log successful connections";"Enabled"
+"HAD-Firewall-Audit-Only";"Administrative Templates";"Network/Network Connections/Windows Defender Firewall/Domain Profile";"Windows Defender Firewall: Allow logging";"Enabled";"Numeric";;
+"HAD-Firewall-Audit-Only";"Administrative Templates";"Network/Network Connections/Windows Defender Firewall/Domain Profile";"Windows Defender Firewall: Prohibit notifications";"Enabled";;;
+"HAD-Firewall-Audit-Only";"Administrative Templates";"Network/Network Connections/Windows Defender Firewall/Domain Profile";"Windows Defender Firewall: Prohibit unicast response to multicast or broadcast requests";"Disabled";;;
+"HAD-Firewall-Audit-Only";"Administrative Templates";"Network/Network Connections/Windows Defender Firewall/Domain Profile";"Windows Defender Firewall: Protect all network connections";"Enabled";;;

@@ -1,0 +1,2 @@
+﻿"GPOName";"SettingCategory";"SettingPath";"SettingName";"SettingStatus";"Type";"Statement";"Value"
+"HAD-IPv6-Disabled";"Registry Settings";"SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters";"DisabledComponents";;"REG_DWORD";;"000000FF"

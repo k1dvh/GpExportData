@@ -1,0 +1,8 @@
+﻿"GPOName";"Type";"Trustee";"TrusteeSID";"Inherited"
+"HAD-Svc-Browser-Disabled";"GpoCustom";"G-S-T0-GPO_HAD-Svc-Browser-Disabled_DENY";"S-1-5-21-1502320860-189160106-1795443177-1303";"False"
+"HAD-Svc-Browser-Disabled";"GpoApply";"G-S-T0-GPO_HAD-Svc-Browser-Disabled_APPLY";"S-1-5-21-1502320860-189160106-1795443177-1304";"False"
+"HAD-Svc-Browser-Disabled";"GpoEditDeleteModifySecurity";"Domain Admins";"S-1-5-21-1502320860-189160106-1795443177-512";"False"
+"HAD-Svc-Browser-Disabled";"GpoEditDeleteModifySecurity";"Enterprise Admins";"S-1-5-21-1502320860-189160106-1795443177-519";"False"
+"HAD-Svc-Browser-Disabled";"GpoRead";"Authenticated Users";"S-1-5-11";"False"
+"HAD-Svc-Browser-Disabled";"GpoRead";"ENTERPRISE DOMAIN CONTROLLERS";"S-1-5-9";"False"
+"HAD-Svc-Browser-Disabled";"GpoEditDeleteModifySecurity";"SYSTEM";"S-1-5-18";"False"

@@ -1,0 +1,92 @@
+﻿"Action";"Name";"GPOStatus";"NoSettings";"UserSettings";"ComputerSettings";"Linked";"LinkingError";"Links";"GPOHasTargets";"Targets";"WmiFilters"
+"To Delete";"HAD-Secure-NetLogon";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-Secure-NetLogon_APPLY";
+"To Delete";"HAD-UAC-Enabled";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-UAC-Enabled_APPLY";
+"To Delete";"HAD-NTP-PDC-Configuration";"AllSettingsEnabled";"False";"False";"True";"True";"False";"oswald.com/Domain Controllers";"True";"Authenticated Users";"Microsoft.GroupPolicy.WmiFilter"
+"To Delete";"HAD-Windows-Defender-Config";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-Windows-Defender-Config_APPLY";
+"To Delete";"HAD-WinRM-Basic-Digest-Auth-Disabled";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-WinRM-Basic-Digest-Auth-Disabled_APPLY";
+"To Delete";"HAD-MSLive-Accounts-Disabled";"UserSettingsDisabled";"False";"False";"True";"False";"False";;"True";"G-S-T0-GPO_HAD-MSLive-Acct-Disabled_APPLY";
+"To Delete";"HAD-Print-Spooler-Disabled";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-Print-Spooler-Disabled_APPLY";"Microsoft.GroupPolicy.WmiFilter"
+"To Delete";"HAD-FIPS-Enabled";"AllSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-FIPS-Enabled_APPLY";
+"To Delete";"HAD-LoginRestrictions-T2";"UserSettingsDisabled";"False";"False";"True";"True";"True";"oswald.com/OZ_T12|oswald.com/Provisioning/Computers";"True";"G-S-T0-GPO_HAD-LoginRestrictions-T2_APPLY|Authenticated Users";"Microsoft.GroupPolicy.WmiFilter"
+"To Delete";"HAD-Bitlocker-TpmOnly-Win10-11";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-Bitlocker-TpmOnly-Win10-11_APPLY";"Microsoft.GroupPolicy.WmiFilter"
+"To Delete";"HAD-LocalAdmins-T0-Wks";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com/OZ_T0";"True";"G-S-T0-GPO_HAD-LocAdmins-T0-Wks_APPLY|Authenticated Users";"Microsoft.GroupPolicy.WmiFilter"
+"To Delete";"HAD-TS-PDC-Flush-admin-groups";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com/Domain Controllers";"True";"G-S-T0-GPO_HAD-TS-PDC-Flush-admin-groups_APPLY";
+"To Delete";"HAD-LMHASH-Disabled";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-LMHASH-Disabled_APPLY";
+"To Delete";"HAD-DCLocaltor-Configuration";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com/Domain Controllers";"True";"G-S-T0-GPO_HAD-DCLoctor-Configuration_APPLY";
+"To Delete";"TEST_Mount-Exchange-Folder";"AllSettingsEnabled";"False";"True";"False";"True";"False";"oswald.com/OZ_T12/Users";"True";"Authenticated Users";
+"To Delete";"HAD-Auto-Update-S3-Thu-0h-Srv";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-Auto-Update-S3-Thu-0h-Srv_APPLY";"Microsoft.GroupPolicy.WmiFilter"
+"To Delete";"Default Domain Policy";"AllSettingsEnabled";"False";"False";"True";"True";"False";"oswald.com";"True";"Authenticated Users";
+"To Delete";"HAD-Kerberos-AES-Enabled";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-Kerberos-AES-Enabled_APPLY";
+"To Delete";"HAD-NBT-NS-Disabled";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-NBT-NS-Disabled_APPLY";
+"To Delete";"HAD-LDAP-Server-Signing-Required";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-LDAP-Srv-Signing-Required_APPLY";
+"To Delete";"HAD-LocalAdmins-Paw";"UserSettingsDisabled";"False";"False";"True";"True";"True";"oswald.com/Administration/PawAccess";"True";"G-S-T0-GPO_HAD-LocAdmins-Paw_APPLY|Authenticated Users";
+"To Delete";"HAD-Security-Logs";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-Secu-Logs_APPLY";
+"To Delete";"HAD-NTLM1-LMx-Disabled";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-NTLM1-LMx-Disabled_APPLY";
+"To Delete";"HAD-Auto-Update-S3-Thu-1h-Srv";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-Auto-Update-S3-Thu-1h-Srv_APPLY";"Microsoft.GroupPolicy.WmiFilter"
+"To Delete";"HAD-Remote-Assistance-Disabled";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-Remote-Assistance-Disabled_APPLY";"Microsoft.GroupPolicy.WmiFilter"
+"To Delete";"HAD-GPO-Refresh-Cycle";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-GPO-Refresh-Cycle_APPLY";
+"To Delete";"HAD-QwantSearch";"AllSettingsEnabled";"False";"False";"True";"True";"False";"oswald.com/OZ_T12/Workstations";"True";"G-S-T0-GPO_HAD-QwantSearch_APPLY";"Microsoft.GroupPolicy.WmiFilter"
+"To Delete";"HAD-PKI-Request Certificates";"AllSettingsEnabled";"False";"False";"True";"True";"False";"oswald.com/OZ_T0/Servers";"True";"OZ-CA-01$";
+"To Delete";"HAD-LoginRestrictions-PawT12L";"UserSettingsDisabled";"False";"False";"True";"True";"True";"oswald.com/Administration/PawT12L";"True";"G-S-T0-GPO_HAD-LoginRestrictions-PawT12L_APPLY|Authenticated Users";
+"To Delete";"HAD-LAPS-Configuration";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-LAPS-Configuration_APPLY";"Microsoft.GroupPolicy.WmiFilter"
+"To Delete";"HAD-SMB1-Disabled";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-SMB1-Disabled_APPLY";"Microsoft.GroupPolicy.WmiFilter"
+"To Delete";"HAD-Logon-Cache-2";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-Logon-Cache-2_APPLY";"Microsoft.GroupPolicy.WmiFilter"
+"To Delete";"HAD-LDAP-Client-Signing-Required";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-LDAP-Client-Signing-Required_APPLY";
+"To Delete";"HAD-Logon-Cache-0";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-Logon-Cache-0_APPLY";"Microsoft.GroupPolicy.WmiFilter"
+"To Delete";"HAD-SMB1-Server-Only-Enabled";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-SMB1-Srv-Only-Enabled_APPLY";"Microsoft.GroupPolicy.WmiFilter"
+"To Delete";"HAD-Windows11-Update-Blocked";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-Windows11-Update-Blocked_APPLY";"Microsoft.GroupPolicy.WmiFilter"
+"To Delete";"HAD-LoginRestrictions-T1";"UserSettingsDisabled";"False";"False";"True";"True";"True";"oswald.com/OZ_T12|oswald.com/Provisioning/Computers";"True";"G-S-T0-GPO_HAD-LoginRestrictions-T1_APPLY|Authenticated Users";"Microsoft.GroupPolicy.WmiFilter"
+"To Delete";"HAD-RDP-NLA-Enabled";"UserSettingsDisabled";"False";"False";"True";"True";"True";"oswald.com/Administration|oswald.com/OZ_T0|oswald.com/OZ_T12|oswald.com/Provisioning/Computers";"True";"G-S-T0-GPO_HAD-RDP-NLA-Enabled_APPLY";"Microsoft.GroupPolicy.WmiFilter"
+"To Delete";"HAD-LoginRestrictions-T2L";"UserSettingsDisabled";"False";"False";"True";"True";"True";"oswald.com/OZ_TL";"True";"G-S-T0-GPO_HAD-LoginRestrictions-T2L_APPLY|Authenticated Users";"Microsoft.GroupPolicy.WmiFilter"
+"To Delete";"HAD-SMB1-Audit-Enabled";"AllSettingsEnabled";"False";"False";"True";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-SMB1-Audit-Enabled_APPLY";"Microsoft.GroupPolicy.WmiFilter"
+"To Delete";"HAD-LoginRestrictions-T0";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com/OZ_T0";"True";"G-S-T0-GPO_HAD-LoginRestrictions-T0_APPLY|Authenticated Users";
+"To Delete";"Default Domain Controllers Policy";"AllSettingsEnabled";"False";"False";"True";"True";"False";"oswald.com/Domain Controllers";"True";"Authenticated Users";
+"To Delete";"NoSetts";"AllSettingsEnabled";"True";"False";"False";"True";"False";"oswald.com";"True";"Authenticated Users";
+"To Delete";"HAD-Auto-Update-Win7-8";"UserSettingsDisabled";"False";"False";"True";"True";"True";"oswald.com/OZ_TL";"True";"G-S-T0-GPO_HAD-Auto-Update-Win7-8_APPLY";"Microsoft.GroupPolicy.WmiFilter"
+"To Delete";"HAD-Auto-Update-S4-Thu-0h-Srv";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-Auto-Update-S4-Thu-0h-Srv_APPLY";"Microsoft.GroupPolicy.WmiFilter"
+"To Delete";"HAD-SMB1-Client-Only-Enabled";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-SMB1-Client-Only-Enabled_APPLY";"Microsoft.GroupPolicy.WmiFilter"
+"To Delete";"HAD-LocalAdmins-T1L";"UserSettingsDisabled";"False";"False";"True";"True";"True";"oswald.com/OZ_TL";"True";"G-S-T0-GPO_HAD-LocAdmins-T1L_APPLY|Authenticated Users";"Microsoft.GroupPolicy.WmiFilter"
+"To Delete";"HAD-Screenlock-Enabled";"ComputerSettingsDisabled";"False";"True";"False";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-Screenlock-Enabled_APPLY";
+"To Delete";"HAD-RDP-Enabled";"UserSettingsDisabled";"False";"False";"True";"True";"True";"oswald.com/Administration|oswald.com/OZ_T0|oswald.com/OZ_T12|oswald.com/Provisioning/Computers";"True";"G-S-T0-GPO_HAD-RDP-Enabled_APPLY";"Microsoft.GroupPolicy.WmiFilter"
+"To Delete";"HAD-LDAP-Client-Signing-Not-Required";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-LDAP-Client-Signing-Not-Required_APPLY";
+"To Delete";"HAD-LAPS-X64-Deployment";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-LAPS-X64-Deployment_APPLY";"Microsoft.GroupPolicy.WmiFilter"
+"To Delete";"HAD-RDP-Disabled";"UserSettingsDisabled";"False";"False";"True";"True";"True";"oswald.com/OZ_TL";"True";"G-S-T0-GPO_HAD-RDP-Disabled_APPLY";
+"To Delete";"HAD-LoginRestrictions-Paw";"UserSettingsDisabled";"False";"False";"True";"True";"True";"oswald.com/Administration/PawAccess";"True";"G-S-T0-GPO_HAD-LoginRestrictions-Paw_APPLY|Authenticated Users";
+"To Delete";"HAD-LocalAdmins-T2L";"UserSettingsDisabled";"False";"False";"True";"True";"True";"oswald.com/OZ_TL";"True";"G-S-T0-GPO_HAD-LocAdmins-T2L_APPLY|Authenticated Users";"Microsoft.GroupPolicy.WmiFilter"
+"To Delete";"HAD-LoginRestrictions-PawT0";"UserSettingsDisabled";"False";"False";"True";"True";"True";"oswald.com/Administration/PawT0";"True";"G-S-T0-GPO_HAD-LoginRestrictions-PawT0_APPLY|Authenticated Users";
+"To Delete";"HAD-SMB1-Enabled";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-SMB1-Enabled_APPLY";"Microsoft.GroupPolicy.WmiFilter"
+"To Delete";"HAD-IPv6-Disabled";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-IPv6-Disabled_APPLY";
+"To Delete";"HAD-Auto-Update-S1-Thu-1h-Srv";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com";"False";;"Microsoft.GroupPolicy.WmiFilter"
+"To Delete";"HAD-LocalAdmins-T0-Srv";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com/OZ_T0";"True";"G-S-T0-GPO_HAD-LocAdmins-T0-Srv_APPLY|Authenticated Users";"Microsoft.GroupPolicy.WmiFilter"
+"To Delete";"HAD-LLMNR-Disabled";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-LLMNR-Disabled_APPLY";
+"To Delete";"No-Users-GPO";"AllSettingsEnabled";"False";"True";"False";"True";"True";"oswald.com/Test_G1";"True";"Authenticated Users";
+"To Delete";"HAD-LAPS-X86-Deployment";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-LAPS-X86-Deployment_APPLY";"Microsoft.GroupPolicy.WmiFilter"
+"To Delete";"HAD-Firewall-Block-Inbound";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-Fwl-Block-Inbound_APPLY";
+"To Delete";"HAD-LDAP-CBT-Enabled";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-LDAP-CBT-Enabled_APPLY";
+"To Delete";"HAD-NTLM-Audit-Enabled";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com/Domain Controllers";"True";"G-S-T0-GPO_HAD-NTLM-Audit-Enabled_APPLY";
+"To Delete";"HAD-LoginRestrictions-T1L";"UserSettingsDisabled";"False";"False";"True";"True";"True";"oswald.com/OZ_TL";"True";"G-S-T0-GPO_HAD-LoginRestrictions-T1L_APPLY|Authenticated Users";"Microsoft.GroupPolicy.WmiFilter"
+"To Delete";"HAD-SMB-Signing-Configuration";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-SMB-Signing-Configuration_APPLY";
+"To Delete";"HAD-Bitlocker-TpmPin-Win10-11";"AllSettingsEnabled";"False";"True";"True";"True";"True";"oswald.com/OZ_T12/Users|oswald.com/OZ_T12/Workstations";"True";"G-S-T0-GPO_HAD-Bitlocker-TpmPin-Win10-11_APPLY";"Microsoft.GroupPolicy.WmiFilter"
+"To Delete";"HAD-Camera-on-lockon-Disabled";"UserSettingsDisabled";"False";"False";"True";"False";"False";;"True";"G-S-T0-GPO_HAD-Camera-on-lockon-Disabled_APPLY";"Microsoft.GroupPolicy.WmiFilter"
+"To Delete";"HAD-Auto-Update-S4-Thu-1h-Srv";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-Auto-Update-S4-Thu-1h-Srv_APPLY";"Microsoft.GroupPolicy.WmiFilter"
+"To Delete";"HAD-PageFile-Shutdown-Cleared";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-PageFile-Shutdown-Cleared_APPLY";
+"To Delete";"HAD-PowerShell-Logs";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-PowerShell-Logs_APPLY";
+"To Delete";"HAD-BloodHound-Mitigation";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-BloodHound-Mitigation_APPLY";
+"To Delete";"HAD-NTLMv2-128bits-Required";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-NTLMv2-128bits-Required_APPLY";
+"To Delete";"HAD-LocalAdmins-PawT0";"UserSettingsDisabled";"False";"False";"True";"True";"True";"oswald.com/Administration/PawT0";"True";"G-S-T0-GPO_HAD-LocAdmins-PawT0_APPLY|Authenticated Users";
+"To Delete";"HAD-Auto-Update-S1-Thu-0h-Srv";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-Auto-Update-S1-Thu-0h-Srv_APPLY";"Microsoft.GroupPolicy.WmiFilter"
+"To Delete";"HAD-DistributedFileSystem-Disabled";"UserSettingsDisabled";"False";"False";"True";"True";"True";"oswald.com/OZ_TL";"True";"G-S-T0-GPO_HAD-DistributedFileSystem-Disabled_APPLY";"Microsoft.GroupPolicy.WmiFilter"
+"To Delete";"HAD-TS-Local-admins-groups";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com/Domain Controllers";"True";"G-S-T0-GPO_HAD-TS-Loc-admins-groups_APPLY|Authenticated Users";
+"To Delete";"HAD-LocalAdmins-T2";"UserSettingsDisabled";"False";"False";"True";"True";"True";"oswald.com/OZ_T12|oswald.com/Provisioning/Computers";"True";"G-S-T0-GPO_HAD-LocAdmins-T2_APPLY|Authenticated Users";"Microsoft.GroupPolicy.WmiFilter"
+"To Delete";"HAD-Local-Accounts-Config";"UserSettingsDisabled";"False";"False";"True";"True";"True";"oswald.com/Administration|oswald.com/OZ_T0|oswald.com/OZ_T12|oswald.com/OZ_TL|oswald.com/Provisioning/Computers";"True";"G-S-T0-GPO_HAD-Loc-Acct-Config_APPLY|Authenticated Users";
+"To Delete";"HAD-Svc-Server-Disabled";"UserSettingsDisabled";"False";"False";"True";"True";"True";"oswald.com/OZ_TL";"True";"G-S-T0-GPO_HAD-Svc-Srv-Disabled_APPLY";"Microsoft.GroupPolicy.WmiFilter"
+"To Delete";"HAD-WDigest-Disabled";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-WDigest-Disabled_APPLY";
+"To Delete";"HAD-Auto-Update-Win10-11";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-Auto-Update-Win10-11_APPLY";"Microsoft.GroupPolicy.WmiFilter"
+"To Delete";"HAD-Firewall-Audit-Only";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-Fwl-Audit-Only_APPLY";
+"To Delete";"HAD-WebProxyAutoDiscovery-Disabled";"AllSettingsEnabled";"False";"True";"True";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-WebProxyAutoDiscovery-Disabled_APPLY";
+"To Delete";"HAD-Smart-Card-Required";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-Smart-Card-Required_APPLY";
+"To Delete";"HAD-Svc-Browser-Disabled";"UserSettingsDisabled";"False";"False";"True";"True";"True";"oswald.com/OZ_TL";"True";"G-S-T0-GPO_HAD-Svc-Browser-Disabled_APPLY";"Microsoft.GroupPolicy.WmiFilter"
+"To Delete";"HAD-LocalAdmins-PawT12L";"UserSettingsDisabled";"False";"False";"True";"True";"True";"oswald.com/Administration/PawT12L";"True";"G-S-T0-GPO_HAD-LocAdmins-PawT12L_APPLY|Authenticated Users";
+"To Delete";"HAD-LDAP-Audit-Enabled";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com/Domain Controllers";"True";"G-S-T0-GPO_HAD-LDAP-Audit-Enabled_APPLY";
+"To Delete";"HAD-SSL2-SSL3-Disabled";"UserSettingsDisabled";"False";"False";"True";"True";"False";"oswald.com";"True";"G-S-T0-GPO_HAD-SSL2-SSL3-Disabled_APPLY";
+"To Delete";"HAD-LocalAdmins-T1";"UserSettingsDisabled";"False";"False";"True";"True";"True";"oswald.com/OZ_T12|oswald.com/Provisioning/Computers";"True";"G-S-T0-GPO_HAD-LocAdmins-T1_APPLY|Authenticated Users";"Microsoft.GroupPolicy.WmiFilter"

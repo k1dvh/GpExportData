@@ -1,0 +1,2 @@
+﻿"GPOName";"SettingCategory";"SettingPath";"SettingName";"SettingStatus";"Type";"Statement";"Value"
+"HAD-UAC-Enabled";"Security Option";"Reg Path: MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\EnableLUA";"User Account Control: Run all administrators in Admin Approval Mode";"true";;;

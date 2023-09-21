@@ -1,0 +1,3 @@
+﻿"GPOName";"SettingCategory";"SettingPath";"SettingName";"SettingStatus";"Type";"Statement";"Value"
+"HAD-TS-PDC-Flush-admin-groups";"Scripts";;"Import-HADScript.bat";;"Startup";"Order: 0";"PSNotConfigured"
+"HAD-TS-PDC-Flush-admin-groups";"Scheduled Task";;"HardenAD\HAD_TS-PDC_Flush-admin-groups";;;"RunAs: NT AUTHORITY\System";"uid: {47ADB0AE-8615-4AB6-B3BE-0F6EC4649C7A}"
